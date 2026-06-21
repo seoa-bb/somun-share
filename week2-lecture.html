@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>소문설계 2강 · 꼼꼼한 요점정리</title>
+<style>
+  :root{--bg:#f7f3ec;--paper:#fffdf8;--ink:#28231e;--muted:#6e665c;--line:#ded5c7;--soft:#f0e6d8;--brown:#7a5b43;--deep:#332922;--olive:#6d795d;--sand:#b68a63;--red:#9b5f4a;--cream:#fbf7ef;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",Segoe UI,sans-serif;line-height:1.72;word-break:keep-all}
+  .wrap{max-width:1140px;margin:0 auto;padding:46px 22px 90px}
+  .hero{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:54px;box-shadow:0 18px 50px rgba(55,43,31,.10);position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(182,138,99,.18),rgba(182,138,99,0) 68%)}
+  .eyebrow{display:inline-flex;border:1px solid var(--line);background:#fbf8f1;color:var(--brown);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:800;letter-spacing:.02em;margin-bottom:22px}
+  h1{font-size:46px;line-height:1.18;letter-spacing:-.055em;margin:0 0 18px;font-weight:850;max-width:900px}
+  h2{font-size:31px;letter-spacing:-.045em;line-height:1.25;margin:0 0 16px;font-weight:820}
+  h3{font-size:21px;letter-spacing:-.035em;margin:24px 0 8px;color:var(--deep)}
+  h4{font-size:16px;margin:16px 0 4px;color:var(--brown);font-weight:800}
+  p{margin:8px 0}.lead{font-size:20px;color:var(--muted);max-width:860px}
+  .toc{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0 0}
+  .toc a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 16px;font-weight:750}.toc a span{display:block;color:var(--muted);font-weight:500;font-size:13px;margin-top:2px}
+  section{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:38px;margin:24px 0;box-shadow:0 10px 32px rgba(55,43,31,.06)}
+  .quote{border-left:5px solid var(--sand);padding:14px 0 14px 20px;margin:20px 0;font-size:21px;font-weight:800;line-height:1.5;letter-spacing:-.03em;background:linear-gradient(90deg,rgba(240,230,216,.55),transparent)}
+  .formula{background:var(--deep);color:#fff;border-radius:22px;padding:24px;margin:18px 0;font-size:19px;font-weight:850;text-align:center;line-height:1.5}.formula span{color:#f1d7bc}
+  .note{background:#f3eadc;border:1px solid #ddccb8;border-radius:18px;padding:18px 20px;margin:16px 0}.note b{color:var(--brown)}
+  ul,ol{margin:8px 0 12px 22px}li{margin:6px 0}.muted{color:var(--muted)}
+  .table{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:16px 0;background:var(--cream)}.row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.cell{padding:15px 18px}.cell:first-child{background:var(--soft);font-weight:850;color:var(--brown)}
+  .case{border:1px solid var(--line);background:var(--cream);border-radius:18px;padding:20px;margin:12px 0}.case b.ct{font-size:18px;color:var(--deep);display:block;margin-bottom:6px}.tagx{display:inline-block;background:var(--deep);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;margin-bottom:8px}
+  .steps{counter-reset:s;margin:14px 0}.step{position:relative;padding-left:52px;margin:14px 0}.step:before{counter-increment:s;content:counter(s);position:absolute;left:8px;top:0;background:var(--brown);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:850}
+  .chk{list-style:none;margin-left:0}.chk li{padding-left:28px;position:relative;margin:8px 0}.chk li:before{content:"✓";position:absolute;left:0;color:var(--olive);font-weight:900}
+  .ours{background:#2c2620;color:#f3ece0;border-radius:26px;padding:38px;margin:24px 0}.ours h2{color:#fff}.ours .ct{color:#f6d9be}.ours .quote{border-color:#caa56a;color:#fff;background:linear-gradient(90deg,rgba(80,70,55,.5),transparent)}.ours .good{color:#bcd0a8;font-weight:800}.ours .bad{color:#e7b9bf;font-weight:800}
+  footer{color:var(--muted);font-size:13px;margin-top:32px;text-align:center}
+  @media(max-width:820px){.hero,section,.ours{padding:26px}h1{font-size:32px}h2{font-size:25px}.toc,.row{grid-template-columns:1fr}.cell:first-child{border-bottom:1px solid var(--line)}}
+  @media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero,section,.ours{box-shadow:none;break-inside:avoid}.toc{display:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">소문설계 1기 · 2강 · 제갈현열 · 2026.06.15</div>
+    <h1>소문설계 2강<br>꼼꼼한 요점 정리</h1>
+    <p class="lead">2주차 = <b>소문 장치 제작</b>. 1주차에 찾은 소문거리(누구에게/어떤 욕구를/무엇으로)를 <b>직관화해서 ‘규정’</b>한다 — 글(가치 선언문 → 소문 문장)과 이미지·오브제로.</p>
+    <div class="formula" style="margin-top:26px">소문 장치 = <span>소문거리를 직관화해 ‘이거다’라고 규정하는 것.</span><br>핵심은 <span>일관성</span> — 한 가지 가치를 다양한 방식으로 끝까지 밀어붙인다.</div>
+  </div>
+
+  <nav class="toc">
+    <a href="#intro">0. 들어가며 — 발표·GPT·한 줄<span>피드백에서 공통으로 나온 원칙</span></a>
+    <a href="#device">1. 소문 장치란?<span>글이 뿌리 / 일관성 / 고객 경험</span></a>
+    <a href="#declare">2. 가치 선언문 만들기<span>욕구→공감 / 가치 3종</span></a>
+    <a href="#sentence">3. 소문 문장 뽑기<span>희소한 한 줄 + 7가지 자가검증</span></a>
+    <a href="#object">4. 오브제 — 증거의 물성화<span>라본·안궁약방·택시</span></a>
+    <a href="#image">5. 이미지 — 관점 전환<span>레시피·베네통</span></a>
+    <a href="#allfb">★ 6개 조 피드백 종합<span>모든 조에 필요한 공통 교훈</span></a>
+    <a href="#hw">6. 2주차 과제 + 돌발퀴즈<span>가치 선언문·소문 문장·오브제/이미지</span></a>
+  </nav>
+
+  <section id="intro">
+    <h2>0. 들어가며 — 발표·피드백에서 반복된 원칙</h2>
+    <ul>
+      <li><b>발표를 직접 해라.</b> “내가 얼마나 아는지”가 아니라 “얼마나 설명할 수 있는지”가 중요. 설명하다 보면 <b>내가 어디서 막히고 뭐가 부족한지</b>를 알게 된다. (엘리베이터 스피치 = 1분 안에 핵심 하나만)</li>
+      <li><b>GPT는 옵션을 주는 존재, 결정은 내가.</b> GPT는 도박(가설 선택)을 못 한다 — 최대한 많은 정보로 포장만 한다. 다 넣으면 중구난방. <b>선택·결정은 사람이</b> 해야 함. (의사결정 못 하면 GPT는 오히려 독.)</li>
+      <li><b>한 줄로 요약되어야 한다.</b> 누구에게 / 어떤 불만을 / 어떤 가치로 해결할래? → <b>타겟 1명, 불만 1개, 해결책 1개.</b> 그래야 끝까지 이어져 소문거리·콘텐츠가 된다.</li>
+      <li><b>해결책은 ‘업 바꿔치기’로 검증.</b> 내 해결책 문장에서 내 가게를 빼고 다른 가게(예: ‘순대국밥’)를 넣어도 말이 되면 — 그건 좋은 해결책이 아니다.</li>
+    </ul>
+  </section>
+
+  <section id="device">
+    <h2>1. 소문 장치란?</h2>
+    <p>1주차에 개발한 소문거리를 이제 <b>직관화해서 ‘규정’</b>하는 게 소문 장치. 규정하면 보통 두 가지가 나온다 — <b>① 글</b>(소문거리를 정리한 글)과 <b>② 이미지/오브제</b>.</p>
+    <div class="note"><b>글 vs 이미지 — 뭐가 더 강한가?</b> 공유·전파되는 건 대부분 <b>이미지</b>. 그런데 오늘 강의의 5할 이상은 <b>글</b>이다. 왜? <b>글이 모든 콘텐츠의 뿌리</b>이기 때문. 어떤 이미지·영상이든 본질적으로 ‘글’이라는 뿌리에서 파생된다.</div>
+    <div class="quote">소문 설계의 핵심은 ‘일관성’. 한 가지 가치를, 다양한 방식으로, 시장이 같은 한 가지로 인식하게 만드는 것.</div>
+    <h3>왜 직관화(언어로 규정)해야 하나</h3>
+    <p>시장이 전하는 건 ‘내 말’이 아니라 <b>‘소비자 자신의 경험’</b>이다. 그래서 늘 자문: <b>“내가 소비자로서 이 이야기를 들었을 때, 남에게 전달할 만한가?”</b> 경험을 직관화해야 전달된다.</p>
+    <div class="case"><span class="tagx">사례</span><b class="ct">월트 디즈니 ‘바다 위의 시(Sea)’</b>
+      A사는 방대한 데이터로 ‘가장 합리적인 입지’를 PT. B사는 헬기로 도쿄 밤하늘에 띄워 — 화려한 야경(왼쪽) 대신 <b>아무것도 없는 바다(오른쪽)</b>를 가리키며 “너희는 사람들의 상상을 현실로 만드는 기업, 일본의 모든 상상의 원천은 바다다”라고 말함. → 전 세계 유일 ‘바다 컨셉’ 디즈니씨가 탄생. <b>A는 합리, B는 디즈니의 경험으로 말했다.</b> 소문 직관화의 핵심 = <b>고객 경험을 어떻게 표현할 것인가.</b></div>
+  </section>
+
+  <section id="declare">
+    <h2>2. [1단계] 가치 선언문 만들기</h2>
+    <p class="muted">예시 제품 = 천연 세제 ‘라본’(먹을 수 있는 세제). 1주차 한 줄 → 고객 관점으로 재정의 = 가치 선언문.</p>
+    <div class="formula">라본 1주차 한 줄: 다섯 살 이하 아이를 키우는 30대 엄마는 <span>그릇에 남은 세제</span>가 늘 걱정되기에 <span>먹을 수 있는 천연 세제</span>를 제공한다.</div>
+
+    <h3>① 욕구를 ‘고객 언어’로 — 규정이 아니라 ‘공감’</h3>
+    <p>내가 분석한 욕구를 들이대지 말고, 그 욕구를 가진 사람 입장에서 공감해 준다.</p>
+    <div class="quote">“소주 세 컵 반, 당신 아이가 1년간 먹는 세제 양입니다. 아이 그릇을 유독 여러 번 헹구는 이유는 — 당신이 이미 좋은 엄마이기 때문입니다.”</div>
+    <p class="muted">심리학의 <b>자기 참조 효과</b>: 사람은 자기와 연결됐다고 느끼는 이야기를 훨씬 오래·중요하게 기억한다. (독도 광고 사례 — ‘독도의 가치’가 아니라 ‘독도를 잃으면 내가 느낄 집단 우울’이라는 소비자 감정에 공감 → 이 빠진 미소 = 독도 모양, 대상 수상.)</p>
+
+    <h3>② 가치를 ‘3가지’로 나눠 본다 (고르는 게 아니라 ‘잇는다’)</h3>
+    <div class="table">
+      <div class="row"><div class="cell">기능 가치</div><div class="cell">제품·서비스의 물리적 특성 / 객관적 진실. <b>(라본: 계면활성제가 안 들어가 있다)</b></div></div>
+      <div class="row"><div class="cell">사용 가치</div><div class="cell">이용 시 얻는 실질적 이익. <b>(건강에 해가 없다 · 아이 건강 염려를 없앤다)</b></div></div>
+      <div class="row"><div class="cell">정서 가치</div><div class="cell">최종적으로 얻는 감정적 만족. <b>(나와 아이에게 안심 · ‘더 좋은 엄마’가 된 느낌)</b></div></div>
+    </div>
+    <p>정답이 있는 게 아니라 <b>말이 되면 된다.</b> 셋 중 하나를 고르는 게 아니라 <b>셋을 이어 붙인다</b>(상호보완): “<i>스스로 더 좋은 엄마가 되게 → 왜? 건강을 지켜주니까 → 어떻게? 계면활성제가 없으니까.</i>”</p>
+
+    <div class="note"><b>= 가치 선언문</b> — 공감 + 3가지 가치를 쭉 나열하면 완성. 라본 예: “세제를 음식으로 바라보다 / 소주 세 컵 반… 당신은 이미 좋은 엄마이기에 / 라본은 요리연구가의 시선으로 세제를 음식으로 재해석한다 / 계면활성제 등 인체 유해 성분이 전혀 없는 최초의 먹을 수 있는 세제 / 세제만큼은 아이 건강을 걱정하지 않아도 된다 / 라본은 세제를 만드는 곳이 아니라, 아이를 안심으로 채우고 당신을 더 좋은 엄마로 만들어 주는 곳입니다.”</div>
+    <div class="quote">가치 선언문 = <b>일관된 방향성</b>. 나·직원·함께 일하는 모두가 이 가치에 동의·일치해야 한다. (삼성은 직원 1명에 2억을 들여 ‘삼성맨’으로 만든다 — 그래서 학벌을 안 본다.)</div>
+  </section>
+
+  <section id="sentence">
+    <h2>3. [2단계] 소문 문장 뽑기</h2>
+    <p>가치 선언문 안에서 <b>희소성 있는 표현 한 줄</b>을 가져온다. 천재적 창작이 아니라, 내가 규정한 선언문의 일부. 안 먹히면 <b>다른 한 줄로 바꾸면 됨</b> — 방향성(선언문)은 안 바뀐다.</p>
+    <div class="formula">라본 소문 문장: <span>“요리 연구가가 아이 그릇에 쓰려고 만든, 먹을 수 있는 세제.”</span></div>
+    <p class="muted">(‘소주 세 컵 반’ 등은 다 빠져도 OK. 다 넣으면 오히려 이상해진다. 안 먹히면 두 번째: “세제 먹이는 걸 아는 부모가 선택하는 세제” / “식약처가 인증한 유일한 먹어도 되는 세제” …)</p>
+
+    <h3>소문 문장 7가지 자가검증 ✅ <span class="muted" style="font-size:14px">(다 충족할 필요는 없음 — 셀프 체크용)</span></h3>
+    <ul class="chk">
+      <li><b>① 시장 가치</b> — 문장 안에 시장에 줄 가치가 들어 있나 (먹을 수 있는 세제)</li>
+      <li><b>② 자격</b> — 나(또는 소수)만 할 수 있는 이야기인가 (당시 국내 유일)</li>
+      <li><b>③ 증명</b> — 이야기에 실체가 있나. <b>소문나면 반드시 검증당한다</b>(없는 얘기 만들기 금지). 라본은 식약처 검사 성적표가 실제로 있었다.</li>
+      <li><b>④ 단일 가치</b> — 한 문장에 가치는 하나만. 이것도 저것도 되면 시장은 기억도·공감도 못 한다.</li>
+      <li><b>⑤ 전달 가능</b> — 소비자가 쉽게(보통 ‘변형해서’) 전달할 수 있나. 초등 5학년도 이해할 수준. (“요리연구가가 만들었대” / “먹을 수 있는 세제래”)</li>
+      <li><b>⑥ 이미지화</b> — 이 문장을 내가 한 장 이미지로 만들 수 있나</li>
+      <li><b>⑦ 확장력</b> — 잘 됐을 때 다양한 후속 이야기로 파생되나 (왜 만들었어? → 검사 사진, 아이 그릇 관리 중요성…)</li>
+    </ul>
+    <div class="note"><b>뇌절(끝까지 밀기)</b>의 힘 — “먹을 수 있는 세제”에서 한 발 더: <b>“먹을수록 건강해지는 세제.”</b> 방향을 하나로 정하면 뇌절할수록 더 희소한 이야기가 나온다.</div>
+    <div class="quote">소문의 도착점 = ‘세계관에 스며든 전도사’.</div>
+    <p class="muted">100명이 소문 듣고 와도 절반은 떠난다. 남은 소수 중 <b>‘왜 이걸 만들었지?’ 하고 가치 선언문 전체를 이해한 사람</b>이 가장 강력한 전염체(전도사)가 된다. (을밀대 냉면·아이폰·명품의 ‘스며듦’ 구조.) <b>열혈 팬 1명 &gt; 1회 고객 100명.</b> 그래서 한 줄 소문 문장은 그 세계관으로 끌어들이는 ‘미끼’다.</p>
+  </section>
+
+  <section id="object">
+    <h2>4. [3단계-A] 오브제 — ‘증거의 물성화’</h2>
+    <p>오브제 = 소문거리의 <b>근거를 어떤 물건으로 보여줄까</b>. 형체가 있어 소비자가 직접 찍고 공유할 수 있는 장치. <b>“이 가치를 직관적으로 한 번에 이해시키는 물건은?”</b>을 고민하면 답이 나온다.</p>
+    <div class="case"><b class="ct">라본</b>① 식약처 검사 성적표를 담은 <b>땡스카드</b>(QR로 성분 확인) / ② 세제가 아니라 <b>와인병·코르크 모양</b>의 고풍스러운 용기(투명·깨끗) → 보자마자 “먹을 수 있는 액체” 직관.</div>
+    <div class="case"><b class="ct">안국 ‘안궁약방’</b>매장 전체가 7억짜리 오브제. “가장 한국적인 전통 방식”을 증명하려 모든 요소를 전통·고급으로. → 리뷰 수백 개가 같은 소문거리를 말함.</div>
+    <div class="case"><b class="ct">전국 국밥집 / 택시</b>메뉴판을 <b>전국 8도 지도</b>로(어디에 무슨 국밥인지 직관). / 택시 에어컨 바람을 뒤로 빼는 장치 = “냉방병 막으려 약하게 튼다”는 소문을 직관화한 오브제.</div>
+    <div class="note"><b>뇌절 오브제(리스키)</b> — 아르헨티나 출판사: <b>‘유통기한 있는 책’</b>(특수 잉크, 개봉 후 7~8개월이면 글자 증발) = “사면 읽어라, 작가는 유통기한이 있다” / 롤스로이스 ‘장례식’(새 차를 땅에 묻어 도서관 문제 환기). 강하게 소문나지만 위험은 관리할 것.</div>
+  </section>
+
+  <section id="image">
+    <h2>5. [3단계-B] 이미지 — ‘가치의 관점 전환’</h2>
+    <p>이미지 = 소문거리 한 줄의 가치를 <b>한 장면으로, 다른 관점에서</b> 보여주기. “이 말을 들으면 떠오르는 장면을 어떻게 한 번에 보여줄까?”</p>
+    <div class="case"><b class="ct">라본</b>① 세제를 ‘요리하듯’ 만드는 장면 / ② 제품을 ‘안심 레시피’처럼(재료를 빼낸다·검사한다) / ③ 식약처 검사 사진. (GPT 이미지는 테스트용 OK, 신뢰가 중요한 본 이미지는 비용 들여 제작 권장.)</div>
+    <div class="case"><b class="ct">베네통 (United Colors of Benetton)</b>핵심 소문거리 하나 = “세상의 모든 다양성을 존중한다.” 메시지 텍스트 없이 이미지만으로(흑·백·황 심장 / 신부와 수녀의 키스 등) — <b>가치를 ‘다른 관점’으로 표현</b>. 뇌절·논란이 곧 강력한 소문이 됨.</div>
+    <div class="note"><b>광고 불변의 법칙 ‘3B’</b> — Baby(아기)·Beauty(미녀)·Beast(귀여운 동물)가 나온 광고는 망하지 않는다. 단, ‘귀여움’은 소장 만족은 줘도 ‘나를 표현하는 즐거움’은 아닐 수 있으니 장치를 하나 더 얹어라.</div>
+    <div class="note"><b>⚠️ 뱀파이어 효과(흡혈 효과)</b> — 크리에이티브가 너무 강하면 정작 <b>브랜드를 잊는다.</b> “따봉”은 다 기억해도 그게 <b>델몬트</b>인 건 모른다. 오브제·이미지·뇌절에 빠져 <b>소문 문장(일관성)을 잃지 말 것.</b> 늘 체크: “이 오브제/이미지에 내 소문 문장이 담겨 있나?”</div>
+  </section>
+
+  <section id="allfb">
+    <h2>★ 6개 조 발표 피드백 종합</h2>
+    <p class="muted">강사님: “내가 6개 조에 주는 피드백은 거의 모든 조에 필요한 피드백이다. 남 거라고 흘리지 말고 잘 들어라.” → 모든 조에 공통으로 적용되는 교훈만 뽑았습니다.</p>
+    <h3>모든 조에 반복된 8가지 핵심</h3>
+    <ol>
+      <li><b>타겟 1 · 불만 1 · 해결책 1.</b> 타겟이 나뉘면 욕구도 해결책도 나뉘어 ‘1단계(언어·이미지 표현)’에서 바로 막힌다. 한 줄로 좁혀라.</li>
+      <li><b>잠재욕구 = 표면을 뒤집은 ‘과시’.</b> 효도→효도 과시 / 화목→화목 과시 / 혼자 우아함→그 ‘혼자’를 과시. 인간은 과시하는 존재. 이 잠재욕구를 건드려야 더 좋은 욕구가 나온다.</li>
+      <li><b>해결책 ‘업 바꿔치기’ 검증.</b> 내 가게를 빼고 다른 가게를 넣어도 말이 되면 — 좋은 해결책이 아니다(희소성 없음).</li>
+      <li><b>GPT는 옵션, 결정은 나.</b> 다 담으면 중구난방. 하나를 골라 깊게 파라.</li>
+      <li><b>‘익숙한 것 + 새로움(차용)’.</b> 다 새로 만들면 시장 설득 비용이 크다. 시장이 아는 문화(혈액형·MBTI·지역 부심)를 차용해, 아직 안 쓴 자리에 얹어라.</li>
+      <li><b>얼리어답터의 과시 + 그룹화된 희소성.</b> “3%만 아는 ○○” 식. 장황한 정보·설명보다 ‘희소성’이 소문거리.</li>
+      <li><b>소문 = 소비자가 ‘자기 경험’을 전달.</b> “내가 이 얘기를 들었을 때, 남에게 전달할 만한가?”를 늘 자문.</li>
+      <li><b>과시할 수 있어야 소문난다 + 원가율을 포기해도 ‘이야깃거리’면 이득.</b> (전승기 ‘계란’ 비유 — 모두가 알지만 아무나 못 하는 것.) 단, 소문날 때를 대비해 <b>숫자는 정확히</b>: “한 판 5만 원”이라 해놓고 따져서 3.5만 원이면 안티의 역공 대상이 된다.</li>
+    </ol>
+    <h3>조별 한 줄 핵심 <span class="muted" style="font-size:14px">(2조 상세는 별도 「1주차 발표 피드백」 문서)</span></h3>
+    <div class="table">
+      <div class="row"><div class="cell">1조 · 두부</div><div class="cell">프리미엄 두부(3대 가족). 타겟·욕구·해결책이 너무 많다 → 잠재욕구 <b>“돈으로 살 수 없는 품격 있는 화목함”</b>(화목 과시)으로 좁혀라.</div></div>
+      <div class="row"><div class="cell">2조 · 감성 혼술바</div><div class="cell">40대 자연스러운 만남. 욕구 3단계는 6개 조 중 최고로 발견. 다만 해결 가치가 ‘뾰족하지’ 않다(핵심 한 마디 부족) → 잠재욕구 하나를 한 마디로(<b>품격 있게 들이대고 예의 있게 거절</b>) + 진입장벽으로 격을 걸러라.</div></div>
+      <div class="row"><div class="cell">3조 · 야끼우동</div><div class="cell">대구 로컬 미식. 타겟이 둘(대구 그리는 사람 / 미식 먼저 알고 싶은 사람)로 갈림 → 하나로. 음식 유래 설명보다 <b>“미식 상위 3%만 아는 대구 숨은맛”</b> 같은 그룹화된 희소성.</div></div>
+      <div class="row"><div class="cell">4조 · 디저트</div><div class="cell">캐릭터+디저트(2030 여성). 캐릭터 수명은 ‘트렌드’가 아니라 <b>‘문화’</b>에 기반해야 롱런. “나를 표현”이 핵심이면 혈액형·MBTI 같은 익숙한 문화를 디저트에 입혀 ‘들고 다니면 나를 표현’하게.</div></div>
+      <div class="row"><div class="cell">5조 · 젊은엄마 의류</div><div class="cell">늦둥이 40대 부부. 방향 좋음. “어려 보인다”를 직접 말하지 말고 <b>‘자식과 커플템’</b> 컨셉으로 단순화(그 행위 자체가 젊어 보이는 행위). 해결책을 더 날카롭게.</div></div>
+      <div class="row"><div class="cell">6조 · 집막카세</div><div class="cell">워킹맘 저녁 구독. 방향 좋음. ‘같이 먹는지 / 혼자 있는 애를 먹이는지’ 세분화. 동네맛집 큐레이션은 배달앱과 차별 약함 → <b>“아이 건강 위한 맞춤 도시락” + 수요 확정 후 시작.</b> “매일 배달비보다 싸다”는 금지(과시가 안 됨).</div></div>
+    </div>
+  </section>
+
+  <section id="hw">
+    <h2>6. 2주차 과제 + 돌발 퀴즈</h2>
+    <h3>2주차 과제 (조별 · 개별 동일 형식)</h3>
+    <div class="steps">
+      <div class="step">1주차 한 줄(누구에게/어떤 불만/어떤 가치)을 <b>고객 언어로 재정의</b> → 공감 + 3가지 가치(기능·사용·정서)를 나열해 <b>‘가치 선언문’</b>을 만든다.</div>
+      <div class="step">가치 선언문에서 희소한 표현을 뽑아 <b>‘소문 문장’ 한 줄</b>을 만든다(7가지 자가검증).</div>
+      <div class="step">그 소문 문장을 표현할 <b>오브제 또는 이미지 중 하나</b>를 만든다.</div>
+    </div>
+    <div class="note"><b>제출물</b> = 가치 선언문 + (그 안의) 소문 문장 1줄 + 오브제 또는 이미지 1개. <b>조별</b>(우리 감성 혼술바)과 <b>개별</b>(도미다리) 각각. 마감: 일요일 자정.</div>
+
+    <h3>돌발 퀴즈 정답</h3>
+    <div class="table">
+      <div class="row"><div class="cell">Q1</div><div class="cell">소문설계로 성장하려면 어떤 주의자? → <b>시장 우선주의자</b></div></div>
+      <div class="row"><div class="cell">Q2</div><div class="cell">시장의 욕구를 알아보는 가장 단순한 방법? → <b>질문하기</b></div></div>
+      <div class="row"><div class="cell">Q3</div><div class="cell">인사이트는 ___로부터 만들어진다 → <b>아웃사이트</b></div></div>
+    </div>
+    <p class="muted" style="margin-top:10px">※ 발표하면 개인 가산점 +1. (1점으로 당락이 갈릴 수 있음.) 다음 주 발표 순서는 6→1조 역순.</p>
+  </section>
+
+  <footer>소문설계 1기 2강 요점정리 · 2026.06.15 · 2조 · 출처: 2주차 강의 녹음</footer>
+</main>
+</body>
+</html>

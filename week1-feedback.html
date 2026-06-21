@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2조 1주차 발표 — 강사님 피드백 정리</title>
+<style>
+  :root{--bg:#f6f2ea;--paper:#fffdf8;--ink:#26211c;--muted:#6c645a;--line:#ddd4c6;--soft:#efe5d6;--brown:#7a5b43;--deep:#2c2620;--olive:#6d795d;--sand:#b68a63;--red:#9b5f4a;--cream:#fbf7ef;--wine:#7c4a52;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",Segoe UI,sans-serif;line-height:1.72;word-break:keep-all}
+  .wrap{max-width:1040px;margin:0 auto;padding:46px 22px 90px}
+  .hero{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:50px;box-shadow:0 18px 50px rgba(55,43,31,.10);position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-130px;top:-130px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(124,74,82,.14),rgba(124,74,82,0) 70%)}
+  .eyebrow{display:inline-flex;border:1px solid var(--line);background:#fbf8f1;color:var(--wine);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:800;margin-bottom:20px}
+  h1{font-size:42px;line-height:1.2;letter-spacing:-.05em;margin:0 0 14px;font-weight:850}
+  h2{font-size:28px;letter-spacing:-.04em;line-height:1.26;margin:0 0 12px;font-weight:820;display:flex;align-items:center;gap:10px}
+  h2 .n{flex:0 0 34px;height:34px;background:var(--wine);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px}
+  h3{font-size:19px;letter-spacing:-.03em;margin:20px 0 8px;color:var(--deep)}
+  p{margin:8px 0}.lead{font-size:19px;color:var(--muted)}
+  .toc{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0 0}
+  .toc a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:13px 16px;font-weight:750;font-size:15px}.toc a span{display:block;color:var(--muted);font-weight:500;font-size:12.5px;margin-top:2px}
+  section{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:34px;margin:20px 0;box-shadow:0 10px 32px rgba(55,43,31,.06)}
+  .quote{border-left:5px solid var(--sand);padding:14px 0 14px 20px;margin:16px 0;font-size:21px;font-weight:800;line-height:1.5;letter-spacing:-.03em;background:linear-gradient(90deg,rgba(239,229,214,.55),transparent)}
+  .note{background:#f3eadc;border:1px solid #ddccb8;border-radius:18px;padding:16px 20px;margin:14px 0}.note b{color:var(--brown)}
+  .good{background:#f2f7ec;border:1px solid #cbd8c3;border-radius:18px;padding:16px 20px;margin:14px 0}.good b{color:#5f7353}
+  .bad{background:#fff5f0;border:1px solid #dec3b8;border-radius:18px;padding:16px 20px;margin:14px 0}.bad b{color:#9b5f4a}
+  ul,ol{margin:8px 0 10px 20px}li{margin:7px 0}.muted{color:var(--muted)}
+  .table{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:14px 0;background:var(--cream)}.row{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.cell{padding:14px 18px}.cell:first-child{background:var(--soft);font-weight:850;color:var(--wine)}
+  .formula{background:var(--deep);color:#fff;border-radius:22px;padding:24px;margin:16px 0;font-size:20px;font-weight:850;text-align:center;line-height:1.5}.formula span{color:#f1d3bc}
+  footer{color:var(--muted);font-size:13px;margin-top:30px;text-align:center}
+  @media(max-width:820px){.hero,section{padding:26px}h1{font-size:31px}h2{font-size:23px}.toc,.row{grid-template-columns:1fr}.cell:first-child{border-bottom:1px solid var(--line)}}
+  @media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero,section{box-shadow:none;break-inside:avoid}.toc{display:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">소문설계 1기 · 2조 · 1주차 발표 피드백</div>
+    <h1>2조 발표에 대한<br>강사님 피드백 정리</h1>
+    <p class="lead">2주차 수업 첫머리, 6개 조 발표·피드백 중 <b>우리 2조에 주신 피드백</b>만 따로 정리했습니다. (강사님이 6개 조 중 우리를 가장 구체적으로 드라이빙하셨어요.)</p>
+  </div>
+
+  <nav class="toc">
+    <a href="#present">0. 우리가 발표한 내용<span>요약</span></a>
+    <a href="#good">1. 잘한 점<span>욕구 3단계 발견</span></a>
+    <a href="#target">2. 타겟 정밀화<span>30후~48 / 과시+외로움</span></a>
+    <a href="#weak">3. 아쉬운 점<span>해결이 ‘뾰족하지’ 않다</span></a>
+    <a href="#idea">4. 강사님 제안<span>품격 있게 들이대고 예의 있게 거절</span></a>
+    <a href="#barrier">5. 진입장벽<span>퀄리피케이션</span></a>
+    <a href="#essence">6. 본질<span>동물의 왕국 + 감추는 도구</span></a>
+    <a href="#action">7. 우리 액션<span>2주차로 연결</span></a>
+  </nav>
+
+  <section id="present">
+    <h2><span class="n">0</span>우리가 발표한 내용 (요약)</h2>
+    <p class="muted">배영순 대표 대신 김서아(조장)가 급히 발표.</p>
+    <ul>
+      <li>나이가 들수록 결 맞는 사람과만 시간을 쓰고 싶어 혼자 시간이 늘지만, 혼자만 있기엔 외롭다. 머리 예쁘게 한 날 갈 데 없을 때, 혼자서도 우아하게 힐링·과시하는 공간.</li>
+      <li>처음 출발은 ‘만남의 장소’였으나 나이트는 부담 → 자연스럽게 만나는 곳으로.</li>
+      <li>욕구 3단계: 표면(혼자 우아한 시간) / 내면(그 시간을 인스타에 과시) / 잠재(비슷한 결의 사람과 자연스러운 만남).</li>
+      <li>장치: 칵테일 메시지(처음 헌팅 → ‘나에게 보내는 메시지’로 수정), 주제별(골프·자영업 공부) 이벤트 + 메타 광고.</li>
+    </ul>
+  </section>
+
+  <section id="good">
+    <h2><span class="n">1</span>잘한 점</h2>
+    <div class="good"><b>표면·내면·잠재 욕구를 6개 조 중 제일 그럴싸하게 발견</b> — 강의에서 예시로 들기 좋을 만큼.</div>
+    <h3>핵심 통찰 — 잠재욕구는 표면욕구를 ‘뒤집은 것’일 때가 많다</h3>
+    <ul>
+      <li>“효도하고 싶다”의 진짜 잠재욕구는 <b>“효도하는 걸 과시하고 싶다.”</b> 둘은 완전히 다른 말. 아무도 “나는 효도를 과시하고 싶다”고 말 안 함 — ‘사회적으로 바람직한 응답(요구 특성)’ 때문. 그러나 그 안의 내면은 ‘적응도 지표’.</li>
+      <li><b>인간은 과시하는 존재</b>(선함조차 과시). 그래서 내면·잠재를 건드리면 더 좋은 욕구가 나온다.</li>
+    </ul>
+  </section>
+
+  <section id="target">
+    <h2><span class="n">2</span>타겟 정밀화</h2>
+    <div class="table">
+      <div class="row"><div class="cell">정확한 나이</div><div class="cell">“30·40대”가 아니라 <b>30대 후반~48세.</b> 30대 초반은 아직 소개팅 한창. <b>48 넘으면 보통 포기/국제결혼</b>으로 감.</div></div>
+      <div class="row"><div class="cell">겉마음</div><div class="cell">“혼자가 좋다”, “나를 위한 시간을 쓴다”, “나만의 우아함이 있다”고 말한다.</div></div>
+      <div class="row"><div class="cell">잠재(과시)</div><div class="cell">그 ‘혼자’를 <b>끊임없이 과시</b>하고 싶어 한다. (호텔 라운지 칵테일 배경 사진, 흐릿한 쇼핑백, “나를 위한 선물” / 남자는 차 로고·플렉스.) 나이 들고 혼자인 사람일수록 과시 욕구가 강함(가정 있으면 그럴 틈이 없다).</div></div>
+      <div class="row"><div class="cell">내면(진짜)</div><div class="cell"><b>외롭다.</b> 마흔(40) 넘어 결혼 안 한 사람 중 (연인 없이) 외롭지 않은 사람을 못 봤다. 과시는 ‘외로움을 감추는 몸부림’.</div></div>
+    </div>
+  </section>
+
+  <section id="weak">
+    <h2><span class="n">3</span>아쉬운 점 — 해결 가치가 ‘뾰족하지’ 않다</h2>
+    <div class="bad"><b>욕구는 잘 찾았으나, 해결이 ‘한 마디’로 뾰족하게 모이지 않았다.</b> 핵심 질문이 비어 있었다 — “사회적으로 성공했지만 외로운 사람에게, 우리는 어떤 <b>‘한 마디’</b>로 이걸 해결해 줄까?”</div>
+    <ul>
+      <li><b>관심사 운영·‘나에게 주는 칵테일’은 ‘장치’일 뿐</b>, 핵심적인 한 마디 해결 가치가 아니다.</li>
+      <li><b>‘나에게 주는 칵테일’은 외로움 해결과 직접적인 연관성이 부족</b>하다. 차라리 <b>‘나를 어필하는 칵테일’</b>이 더 적합할 수 있다.</li>
+      <li><b>해결책이 많으면</b> 깊이 있는 고민이 어렵고, 서로 상충해 결정이 힘들어진다. → 버릴 것은 버리고 <b>명확한 한 가지 선</b>을 정해야 한다.</li>
+      <li><b>‘뒤집기’ 검증</b> — 진짜 잠재욕구는 표면을 뒤집어도 말이 된다(효도→효도 과시). 표면(혼자 우아함)을 뒤집으면 ‘사실은 이어지고 싶다·과시하고 싶다’가 나온다 — 그 잠재를 한 마디로 모은다.</li>
+    </ul>
+    <div class="note"><b>참고 — 왜 ‘너 외로우니까 와’가 안 되나</b> 40대가 넘으면 사회적 지위가 생겨 ‘하위 인생들의 번잡스러움’은 원치 않는다. 결정사는 내상 입는 곳(천억 대표도 ‘머리 없으면’ 3등급). 그래서 부담 없는 ‘자연스러운 만남’을 원한다.</div>
+  </section>
+
+  <section id="idea">
+    <h2><span class="n">4</span>강사님 제안 — 매력적인 소문거리</h2>
+    <div class="formula"><span>“품격 있게 들이대고, 예의 있게 거절할 수 있는 곳.”</span></div>
+    <h3>영국 펍 사례</h3>
+    <ul>
+      <li>그 펍에 적힌 문구 — “남자는 여자의 허벅지를 만질 권리가 있다(페미니즘 창시자의 회고) / 여자는 예의 있게 거절할 권리가 있다.”</li>
+      <li>의미: 두려워 말고 좋아하는 이성에게 말을 걸어라, 마음에 안 들면 예의 있게 거절해라 — <b>둘 다 자유로운, 나이스한 화이트칼라의 사교 공간.</b></li>
+      <li>정체성: <b>누구나 나를 드러내고, 결 맞는 사람과 자유롭게 대화하고, 싫으면 자유롭게 거절하는 곳.</b> → 이게 매력적인 소문거리. 나머지(주제별 운영·칵테일 등)는 전부 부가적이다.</li>
+    </ul>
+    <div class="note"><b>장치가 ‘오는 사람의 결’을 정한다</b> — “‘나에게 주는 칵테일’을 찍어 인스타에 올리려고 오는 사람”과 “내 취향·또래와 편하게 대화하러 오는 사람”은 결이 완전히 다르다. 그래서 <b>어떤 장치를 내세우느냐가 곧 어떤 결의 고객이 오느냐를 결정</b>한다. (→ 회의에서 칵테일을 ‘관심사(취향) 표현’으로 발전시킨 근거.)</div>
+  </section>
+
+  <section id="barrier">
+    <h2><span class="n">5</span>진입장벽(퀄리피케이션) — 경계를 정하는 법</h2>
+    <p>자칫하면 헌팅바처럼 보인다. <b>그 경계를 결정하는 건 ‘소비자의 퀄리티’</b>다. (자산 인증 상류 소개팅앱 ‘빌리어네어’ 사례처럼.)</p>
+    <div class="quote">정답은 — 오는 사람의 등급을 ‘퀄리피케이션’ 한다.</div>
+    <ul>
+      <li>예: 칵테일 한 잔 <b>5만 5천 원</b>(입장료 역할로 격을 거름) · <b>대리 계산 절대 금지</b> · ‘자유로운 들이댐과 예의 있는 거절’이 이곳의 문화.</li>
+      <li>왜 디테일이 안 나왔나? <b>해결책이 너무 많아서</b> — 하나로 좁히면 이런 디테일이 깊게 나온다.</li>
+    </ul>
+  </section>
+
+  <section id="essence">
+    <h2><span class="n">6</span>본질 — ‘동물의 왕국’ + 감추는 도구</h2>
+    <ul>
+      <li>이 가게의 본질은 “여기를 <b>자연스러운 만남의 ‘동물의 왕국’으로 만들겠다</b>”는 것.</li>
+      <li>그런데 사람들은 자기가 ‘동물’인 걸 인정 안 하고 안 들어오려 한다 → 칵테일·주제별 모임 같은 장치는 <b>그 본질을 감추는 ‘가짜 장치(양심의 면제부)’</b>.</li>
+      <li>표면은 우아한 플라워바, 안은 자연스러운 만남의 바. <b>본질(만남)을 메시지로 대놓고 드러내면 상충</b>한다.</li>
+      <li>그래서 해결책 ‘하나(동물의 왕국)’를 정하고 깊게 들어가야, 진입장벽·칵테일 같은 ‘감추는 장치’가 그 하나로 자연스럽게 이어진다.</li>
+    </ul>
+  </section>
+
+  <section id="action">
+    <h2><span class="n">7</span>우리 액션 — 2주차로 연결</h2>
+    <ol>
+      <li>잠재욕구 하나를 <b>‘한 마디’로 뾰족하게</b> 모은다 → “품격 있게 들이대고 예의 있게 거절(= 결 맞는 사람과 자연스러운 만남)”. (칵테일·주제별 운영은 그 한 마디를 뒷받침하는 장치.)</li>
+      <li>칵테일을 <b>‘나에게 주는 메시지’ → ‘관심사(취향) 표현’</b>으로 전환(같은 결 거름 + 대화 진입점).</li>
+      <li>진입장벽(고급 취미 회원제·가격·대리계산 금지)으로 ‘격’을 걸러 본질을 우아하게 감춘다.</li>
+      <li>이걸 2주차 과제(<b>가치 선언문 → 소문 문장 → 오브제/이미지</b>)로 푼다. → <b>2주차 조별 과제 문서 참고.</b></li>
+    </ol>
+  </section>
+
+  <footer>소문설계 1기 · 2조 1주차 발표 피드백 정리 · 출처: 2주차 강의 녹음 · 김서아 · 배영순 · 하지우 · 박지호</footer>
+</main>
+</body>
+</html>

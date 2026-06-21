@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2조 · 2주차 조별 과제</title>
+<style>
+  :root{--bg:#f6f2ea;--paper:#fffdf8;--ink:#26211c;--muted:#6c645a;--line:#ddd4c6;--soft:#efe5d6;--brown:#7a5b43;--deep:#2c2620;--olive:#6d795d;--sand:#b68a63;--red:#9b5f4a;--cream:#fbf7ef;--wine:#7c4a52;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",Segoe UI,sans-serif;line-height:1.72;word-break:keep-all}
+  .wrap{max-width:1060px;margin:0 auto;padding:46px 22px 90px}
+  .hero{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:50px;box-shadow:0 18px 50px rgba(55,43,31,.10);position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-130px;top:-130px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(124,74,82,.14),rgba(124,74,82,0) 70%)}
+  .eyebrow{display:inline-flex;border:1px solid var(--line);background:#fbf8f1;color:var(--wine);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:800;margin-bottom:20px}
+  h1{font-size:42px;line-height:1.2;letter-spacing:-.05em;margin:0 0 14px;font-weight:850}
+  h2{font-size:29px;letter-spacing:-.04em;line-height:1.26;margin:0 0 14px;font-weight:820}
+  h3{font-size:20px;letter-spacing:-.03em;margin:22px 0 8px;color:var(--deep)}
+  p{margin:8px 0}.lead{font-size:19px;color:var(--muted)}
+  .toc{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0 0}
+  .toc a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 16px;font-weight:750}.toc a span{display:block;color:var(--muted);font-weight:500;font-size:13px;margin-top:2px}
+  section{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:36px;margin:22px 0;box-shadow:0 10px 32px rgba(55,43,31,.06)}
+  .quote{border-left:5px solid var(--sand);padding:14px 0 14px 20px;margin:18px 0;font-size:21px;font-weight:800;line-height:1.5;letter-spacing:-.03em;background:linear-gradient(90deg,rgba(239,229,214,.55),transparent)}
+  .formula{background:var(--deep);color:#fff;border-radius:22px;padding:26px;margin:18px 0;font-size:20px;font-weight:850;text-align:center;line-height:1.5}.formula span{color:#f1d3bc}
+  .table{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:14px 0;background:var(--cream)}.row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.cell{padding:15px 18px}.cell:first-child{background:var(--soft);font-weight:850;color:var(--wine)}
+  .badgood{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.bad{border:1px solid #dec3b8;background:#fff5f0;border-radius:16px;padding:18px}.good{border:1px solid #cbd8c3;background:#f6fbf2;border-radius:16px;padding:18px}.bad b{color:#9b5f4a;display:block;margin-bottom:6px}.good b{color:#5f7353;display:block;margin-bottom:6px}.bad p,.good p{margin:0;font-size:15px;color:var(--muted)}
+  .note{background:#f3eadc;border:1px solid #ddccb8;border-radius:18px;padding:16px 20px;margin:14px 0}.note b{color:var(--brown)}
+  .declare{background:#fffaf2;border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin:14px 0;font-size:16.5px;line-height:1.85}
+  .declare .t{font-weight:850;font-size:19px;color:var(--wine);margin-bottom:10px}
+  ul,ol{margin:8px 0 10px 20px}li{margin:6px 0}.muted{color:var(--muted)}
+  .chip{display:inline-block;background:var(--soft);border:1px solid var(--line);color:var(--brown);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:700;margin:3px 4px 3px 0}
+  .obj{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}.objc{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px}.objc b{display:block;font-size:17px;margin-bottom:6px;color:var(--deep)}.objc p{margin:0;font-size:15px;color:var(--muted)}
+  footer{color:var(--muted);font-size:13px;margin-top:30px;text-align:center}
+  @media(max-width:820px){.hero,section{padding:26px}h1{font-size:31px}h2{font-size:24px}.toc,.row,.badgood,.obj{grid-template-columns:1fr}.cell:first-child{border-bottom:1px solid var(--line)}}
+  @media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero,section{box-shadow:none;break-inside:avoid}.toc{display:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">소문설계 1기 · 2조 · 2주차 조별 과제</div>
+    <h1>품격 있게 들이대고,<br>예의 있게 거절할 수 있는 곳</h1>
+    <p class="lead">강사님 피드백(좁혀라 + 진입장벽)과 2주차 강의(가치 선언문·소문 문장·오브제)를 반영해, 1주차 감성 혼술바를 <b>잠재욕구 하나로 좁혀</b> 다시 잡았습니다.</p>
+  </div>
+
+  <nav class="toc">
+    <a href="#meeting">1. 조별 회의 정리<span>2주차 논의 핵심</span></a>
+    <a href="#revise">2. 1주차 과제 수정<span>피드백 반영 · 좁히기</span></a>
+    <a href="#declare">3. 가치 선언문<span>공감 + 가치 3종</span></a>
+    <a href="#sentence">4. 소문 문장<span>희소한 한 줄</span></a>
+    <a href="#object">5. 오브제 / 이미지<span>취향 칵테일 = 입장권</span></a>
+  </nav>
+
+  <section id="meeting">
+    <h2>1. 조별 회의 정리 (2주차)</h2>
+    <h3>① 컨셉을 ‘좁히고 희소하게’</h3>
+    <ul>
+      <li>기존 관념을 바꾸는 건 비용·시간이 크고 희소성 확보가 어렵다. → <b>왕소금구이 교훈</b>: 자체 개발이 아니라 ‘요소 조합 + 스토리텔링’(고기보다 김치·불판 짜파게티)으로 차별화에 성공.</li>
+    </ul>
+    <h3>② 칵테일을 ‘관심사(취향) 표현’으로 전환</h3>
+    <ul>
+      <li>헌팅포차 이미지를 벗기 위해, 칵테일에 <b>골프·여행·운동·영화 등 관심사</b>를 부여. 같은 관심사 칵테일을 고른 사람끼리 자연스럽게 대화가 시작된다.</li>
+      <li><b>고급스러운 취미 위주</b>로 선정(독서 같은 흔한 취미는 제외) → 공간의 품격 유지.</li>
+    </ul>
+    <h3>③ ‘격’ 유지 — 회원제 대신 ‘취미의 격’으로 거른다 <span style="font-size:13px;color:#7c4a52">(강사님 조별회의 피드백)</span></h3>
+    <ul>
+      <li><b>회원제는 ‘처음부터’ 하지 않는다.</b> 강사님: 입회 인증 절차가 곧 <b>허들</b>이 되어 진입을 막는다. → 회원제는 ‘자주 오면 혜택’ 수준으로만.</li>
+      <li><b>진입장벽은 ‘취미의 격’으로.</b> 강사님: 공감 요소(취미)를 <b>능력(돈·시간)이 있어야 즐기는 격식 있는 취미</b>로 잡아라 — 레저스포츠·호캉스·골프·해외여행·민물낚시(장비) 등. 흔한 취미(독서)는 제외. → 취미 자체가 손님의 격을 자연스럽게 거른다.</li>
+      <li><b>자유 3가지를 보장</b> — ① 이야기 건넬 자유 ② 혼자 있을 자유 ③ 예의 있게 거절할 자유.</li>
+    </ul>
+    <p class="muted">※ 다음 스터디에서 <b>오브제 확정</b> 예정. (개인 과제는 각자 매장 + 지정 유튜브 영상 보고 논의)</p>
+  </section>
+
+  <section id="revise">
+    <h2>2. 1주차 과제 수정 — 강사님 피드백 반영</h2>
+    <div class="note"><b>강사님 피드백 요약</b> — “욕구 3단계는 6개 조 중 제일 잘 찾았다. <b>그런데 해결 가치가 ‘뾰족하지’ 않다</b> — ‘어떤 한 마디로 해결해줄까’가 부족했다. <b>잠재욕구 하나를 한 마디로 뾰족하게 모으고</b>, 오는 사람의 격을 <b>진입장벽</b>으로 걸러라. (잠재욕구는 표면을 뒤집어도 말이 돼야 진짜.)”</div>
+    <div class="badgood">
+      <div class="bad"><b>1주차 (뭉툭함)</b><p>잠재욕구는 잘 찾았지만, 그걸 푸는 ‘한 마디(핵심 가치)’가 없어 장치만 나열됨. ‘나에게 주는 칵테일’도 외로움 해결과 직접 연관성이 부족.</p></div>
+      <div class="good"><b>2주차 (뾰족하게)</b><p>잠재욕구 <b>하나</b>(품격을 지키며 결 맞는 사람과 자연스러운 만남)를 ‘한 마디’로 모으고, 장치는 그 한 마디를 뒷받침. 칵테일 = ‘관심사 표현’으로 발전.</p></div>
+    </div>
+    <h3>좁힌 핵심</h3>
+    <div class="table">
+      <div class="row"><div class="cell">시장(좁힘)</div><div class="cell">사회적 지위가 자리 잡은 <b>30대 후반~40대 후반 싱글.</b> 새 인연엔 열려 있지만, 헌팅·소개팅의 ‘난잡함’은 자기 품격에 맞지 않는 사람.</div></div>
+      <div class="row"><div class="cell">잠재욕구(하나)</div><div class="cell"><b>품격을 지키면서, 나와 결이 맞는 사람과 자연스럽게 이어지고 싶다.</b> (외로움은 드러내지 않으면서 — 강사님: ‘혼자도 우아한 나’를 과시하며 속으론 만남을 원함)</div></div>
+      <div class="row"><div class="cell">해결(한 줄)</div><div class="cell"><b>“품격 있게 들이대고, 예의 있게 거절할 수 있는 곳.”</b> (영국 펍 사례 — 자유로운 사교 + 예의 있는 거절)</div></div>
+    </div>
+    <div class="note"><b>장치는 모두 ‘하나의 본질’을 위한 도구</b> — 관심사 칵테일 · 회원제 · 고급 취미 진입장벽 · ‘혼자 있을/전화할 자유’ = 전부 <b>‘자연스러운 만남’이라는 본질을 우아하게 감추는 양심의 면제부</b>다. (강사님: ‘동물의 왕국’을 만들되, 사람들이 자기가 동물인 걸 인정 안 하니 장치로 감춰라. 표면은 취향 사교 클럽, 안은 자연스러운 만남.)</div>
+  </section>
+
+  <section id="declare">
+    <h2>3. 가치 선언문 (2주차 과제)</h2>
+    <p class="muted">① 욕구를 고객 언어로 ‘공감’ + ② 가치 3종(기능·사용·정서)을 나열 → 가치 선언문.</p>
+    <div class="table">
+      <div class="row"><div class="cell">기능 가치<br><span style="font-weight:500;color:var(--muted);font-size:13px">(객관적 특성)</span></div><div class="cell">관심사(고급 취미)별 칵테일 + 회원제·취향 기반 진입장벽 → <b>격 맞는 사람만 모인다.</b></div></div>
+      <div class="row"><div class="cell">사용 가치<br><span style="font-weight:500;color:var(--muted);font-size:13px">(실질 이익)</span></div><div class="cell">헌팅 티 안 내고, 같은 취향으로 <b>자연스럽게 대화·만남이 시작</b>된다. 싫으면 <b>예의 있게 거절</b>한다.</div></div>
+      <div class="row"><div class="cell">정서 가치<br><span style="font-weight:500;color:var(--muted);font-size:13px">(감정 만족)</span></div><div class="cell">“나는 여전히 품격 있고 매력적이며, <b>나잇값 하면서도 설렐 수 있는 사람</b>”이라는 자기 확인 + 외로움 해소.</div></div>
+    </div>
+    <div class="declare">
+      <div class="t">가치 선언문 — “헌팅은 없지만, 인연은 있다”</div>
+      나이가 들수록 새로운 사람을 만나기는 점점 더 어려워집니다. 그렇다고 헌팅포차나 소개팅은, 어느새 자리 잡은 내 품격에 맞지 않죠.<br>
+      당신이 혼자의 시간을 우아하게 보내는 건 외로워서가 아니라, 아무하고나 어울리고 싶지 않기 때문입니다.<br>
+      그래서 이곳은 <b>‘취향이 곧 입장권’</b>인 곳입니다. 골프·와인·여행처럼 당신의 취향을 담은 칵테일 한 잔이, 같은 결의 사람을 부르는 신호가 됩니다.<br>
+      우리는 격에 맞는 사람만 모이도록 회원제와 취향 기준을 둡니다. 그래서 이곳에선 <b>품격 있게 다가가고, 예의 있게 거절하는 것이 문화</b>입니다.<br>
+      혼자 있을 자유도, 누군가와 이어질 자유도 모두 당신의 것입니다.<br>
+      이곳은 만남을 주선하는 바가 아니라, <b>품격을 지키면서도 결 맞는 사람을 자연스럽게 발견하게 해주는 어른들의 취향 사교 바</b>입니다.
+    </div>
+  </section>
+
+  <section id="sentence">
+    <h2>4. 소문 문장</h2>
+    <div class="formula">핵심 가치(내부 원리): <span>“품격 있게 들이대고, 예의 있게 거절할 수 있는 곳.”</span></div>
+    <p class="muted">단, 강사님 말씀대로 ‘만남’이라는 본질을 메시지로 대놓고 드러내면 상충하므로 — 시장에 던지는 표면 소문 문장은 ‘취향 사교’로 포장합니다.</p>
+    <h3>시장에 던질 소문 문장 후보 (한 줄·단일 가치)</h3>
+    <div class="chip">“내 취향이 곧 입장권.”</div>
+    <div class="chip">“헌팅은 없지만, 인연은 있다.”</div>
+    <div class="chip">“취향이 통하는 어른들의 사교 바.”</div>
+    <div class="chip">“품격 있게 다가가고, 예의 있게 거절하는 곳.”</div>
+    <div class="note"><b>7가지 자가검증 빠른 체크</b> — 시장가치 ✅(취향 기반 사교) · 자격 ✅(취향=입장권 컨셉은 희소) · 증명 ✅(관심사 칵테일·회원제로 실체화) · 단일가치 ✅(‘취향이 입장권’ 하나) · 전달가능 ✅(“취향이 입장권이래”) · 이미지화 ✅(취향 칵테일 한 장) · 확장력 ✅(취미별 이벤트·회원 문화로 파생).</div>
+  </section>
+
+  <section id="object">
+    <h2>5. 오브제 / 이미지</h2>
+    <p class="muted">‘취향이 곧 입장권’이라는 가치를 증명하는 물건(오브제) 또는 한 장면(이미지). 둘 중 하나 제출.</p>
+    <h3>오브제 (추천) — ‘취향 칵테일 = 입장권’</h3>
+    <div class="obj">
+      <div class="objc"><b>🍸 취향 칵테일 메뉴 = 취향 카드</b><p>골프·와인·여행·러닝 등 취미별 칵테일. <b>그 칵테일을 시키는 것 자체가 “나는 이 취향” 인증</b>이자 같은 취향끼리 대화의 진입점. (찍어서 인스타 올릴 소재)</p></div>
+      <div class="objc"><b>🎫 회원 ‘취향 패스’</b><p>고급 취미 인증 기반 회원 카드/배지. 격 맞는 사람만 모인다는 진입장벽을 물성화. ‘혼자 있을/전화할 자유’ 안내도 함께.</p></div>
+    </div>
+    <h3>이미지 (대안) — ‘가치의 관점 전환’</h3>
+    <div class="note">서로 <b>다른 취미 칵테일</b>(골프 칵테일 ↔ 와인 칵테일)을 든 두 사람이 자연스럽게 대화하는 한 장면. “헌팅바가 아니라 취향으로 통하는 곳”을 한눈에. 카피: <b>“취향이 같으면, 말은 자연스럽게 이어진다.”</b></div>
+    <div class="note" style="background:#f4ece0"><b>⚠️ 뱀파이어 효과 주의</b> — 오브제·이미지가 재밌어도, 결국 <b>‘취향이 입장권’이라는 소문 문장이 담겨 있는지</b> 늘 확인. (따봉은 기억해도 델몬트는 잊는 함정.)</div>
+  </section>
+
+  <footer>소문설계 1기 · 2조 2주차 조별 과제 · 강사님 피드백 반영 + 2주차 강의(가치 선언문·소문 문장·오브제) · 김서아 · 배영순 · 하지우 · 박지호</footer>
+</main>
+</body>
+</html>
