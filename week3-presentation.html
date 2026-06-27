@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>소문설계 3주차 발표 — 글래스 코드 소문 확산</title>
+<style>
+  :root{--bg:#181410;--panel:#221c16;--line:#3a3026;--ink:#f3ead9;--mute:#b6a890;--gold:#d8b15f;--wine:#c98a92;--olive:#a9bb8f;--deep:#0f0c09;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--deep);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.5;word-break:keep-all;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:18px}
+  .slide{width:100%;max-width:1160px;aspect-ratio:16/9;background:radial-gradient(120% 120% at 80% -10%,#2a2018,#171210 60%);border:1px solid var(--line);border-radius:20px;padding:34px 40px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+  .ey{font-size:12px;letter-spacing:.22em;color:var(--gold);font-weight:800;text-transform:uppercase}
+  h1{font-size:30px;letter-spacing:-.02em;margin-top:5px}
+  h1 span{color:var(--gold)}
+  .tag{font-size:14px;color:var(--mute);text-align:right}
+  .tag b{color:var(--wine)}
+  .cols{display:grid;grid-template-columns:0.82fr 1.18fr;gap:20px;flex:1;min-height:0}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px;display:flex;flex-direction:column}
+  .ct{font-size:12.5px;letter-spacing:.04em;font-weight:800;color:#fff;display:inline-block;border-radius:7px;padding:4px 11px;margin-bottom:12px;align-self:flex-start}
+  .mass .ct{background:var(--olive);color:#1d2414}
+  .on .ct{background:var(--wine);color:#2a1416}
+  .h{font-size:13.5px;color:var(--gold);font-weight:800;margin:9px 0 3px}
+  .li{font-size:13px;color:var(--ink);margin:3px 0;padding-left:12px;position:relative}
+  .li:before{content:"›";position:absolute;left:0;color:var(--mute)}
+  .mute{color:var(--mute);font-size:12.5px}
+  /* 온 흐름 */
+  .chain{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+  .node{background:#1b1510;border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}
+  .node b{color:var(--gold)}
+  .node .s{color:var(--mute);font-size:11.5px}
+  .arrow{text-align:center;color:var(--wine);font-size:13px;line-height:.6;margin:-2px 0}
+  .deal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+  .deal div{border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:11.5px}
+  .deal .g{background:rgba(169,187,143,.08)}.deal .w{background:rgba(201,138,146,.08)}
+  .deal .lab{font-weight:800;font-size:10.5px;letter-spacing:.03em;display:block;margin-bottom:3px}
+  .deal .g .lab{color:var(--olive)}.deal .w .lab{color:var(--wine)}
+  .foot{margin-top:14px;text-align:center;color:var(--mute);font-size:11.5px;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="top">
+    <div>
+      <div class="ey">소문설계 3주차 · 2조 · 소문 확산(매체)</div>
+      <h1>「글래스 코드」 <span>GLASS CODE</span></h1>
+    </div>
+    <div class="tag">핵심 소문 문장<br><b>“잔으로 인연을 만드는 곳”</b></div>
+  </div>
+
+  <div class="cols">
+    <!-- 매스 -->
+    <div class="col mass">
+      <span class="ct">매스 = 낚시 · 한 문장을 접점마다</span>
+      <div class="h">ⓐ 검색 — 네이버 플레이스 소개글</div>
+      <div class="li">“품격 있게 매칭되는 취향 바 — 잔으로 인연을 만드는 곳”</div>
+      <div class="h">ⓑ 공간 — 테이블 안내문 · 벽면</div>
+      <div class="li">말 걸기·예의 있는 거절·<b>매칭 카드</b> 룰</div>
+      <div class="li">리뷰 방향 제한 → 다시 검색 매체로</div>
+      <div class="li">대형 벽면 “잔으로 인연을…” = <b>포토존</b></div>
+      <div class="h">ⓒ 사람 — 직원 프레이밍</div>
+      <div class="li">“오늘 ○○ 취향 분들 계세요”로 틀 지어주기</div>
+    </div>
+
+    <!-- 온 -->
+    <div class="col on">
+      <span class="ct">온 = 사냥 · 호스트 한 명을 매체로 (전염병)</span>
+      <div class="chain">
+        <div class="node"><b>타겟</b> — 자리 잡은 30후~40후 <b>싱글</b></div>
+        <div class="arrow">▼</div>
+        <div class="node"><b>취미 기반 모임</b> <span class="s">(A) CEO 조찬모임 속 골프·와인 분과(영순 대표 실참여) · (B) ‘소모임’ 앱 취미 모임</span></div>
+        <div class="arrow">▼</div>
+        <div class="node"><b>호스트 = 의사결정권자</b> <span class="s">모임 장소·뒤풀이를 정하는 주최자·회장</span></div>
+        <div class="arrow">▼ 협약</div>
+        <div class="deal">
+          <div class="g"><span class="lab">우리 → 호스트 (GIVE)</span>단체 혜택 · ‘취향 매칭 나이트’ · <b>주최자로 세워줌(격↑)</b></div>
+          <div class="w"><span class="lab">호스트 → 우리 (GET)</span>단체 방문 · 입소문 · 재방문 · <b>새 회원 영입 명분</b></div>
+        </div>
+        <div class="arrow">▼ 컨택: 네트워크(영순)·소모임 앱·콜드메일 / 분기 1회+</div>
+        <div class="node" style="border-color:var(--wine)"><b>확산</b> — 호스트 → 모임 회원 → 또 다른 취미 모임 (기하급수)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">소문거리는 ‘더 나은 이야기’가 아니라 ‘선이 그어지는 다른 이야기’ · 2조 김서아 · 배영순 · 하지우 · 박지호</div>
+</div>
+</body>
+</html>

@@ -16,7 +16,7 @@
   section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px 28px;margin:16px 0;box-shadow:0 8px 26px rgba(55,43,31,.05)}
   h2{font-size:20px;letter-spacing:-.01em;margin-bottom:6px;display:flex;align-items:center;gap:9px}
   h2 .n{flex:none;width:30px;height:30px;border-radius:8px;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800}
-  h3{font-size:16px;margin:16px 0 5px;color:var(--deep)}
+  h3{font-size:16px;margin:18px 0 5px;color:var(--deep)}
   p{margin:7px 0}.mute{color:var(--mute);font-size:14px}
   b{color:var(--deep)}
   ul{margin:6px 0 6px 19px}li{margin:5px 0;font-size:14.5px}
@@ -26,16 +26,21 @@
   .bad,.good{border-radius:12px;padding:14px 16px;font-size:14px}
   .bad{border:1px solid #dec3b8;background:#fff5f0}.good{border:1px solid #cbd8c3;background:#f6fbf2}
   .bad b{color:#9b5f4a;display:block;margin-bottom:4px}.good b{color:#5f7353;display:block;margin-bottom:4px}
-  .card{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:10px 0}
   .signage{border:2px solid var(--deep);border-radius:14px;background:var(--paper);padding:18px 20px;margin:12px 0}
   .signage .ttl{font-weight:800;color:var(--wine);font-size:15px;margin-bottom:8px;letter-spacing:.02em}
   .signage ul{margin:4px 0 0 18px}.signage li{margin:6px 0}
   .flow{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:12px 0}
   .flow .row{display:flex;border-top:1px solid var(--line)}.flow .row:first-child{border-top:none}
-  .flow .k{flex:none;width:120px;background:var(--soft);font-weight:800;color:var(--brown);padding:12px 14px;font-size:13.5px}
+  .flow .k{flex:none;width:128px;background:var(--soft);font-weight:800;color:var(--brown);padding:12px 14px;font-size:13.5px}
   .flow .v{padding:12px 14px;font-size:14.5px}
+  .deal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+  .deal .box{border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;background:var(--cream)}
+  .deal .box .h{font-weight:800;font-size:13px;letter-spacing:.02em;margin-bottom:7px;display:inline-block;border-radius:6px;padding:3px 9px;color:#fff}
+  .give .h{background:var(--olive)}.get .h{background:var(--wine)}
+  .deal ul{margin:2px 0 0 17px}.deal li{margin:4px 0}
+  .tag{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:2px 9px;font-size:12.5px;font-weight:800;color:var(--brown);margin-right:6px}
   footer{text-align:center;color:var(--mute);font-size:13px;margin-top:30px}
-  @media(max-width:680px){.badgood{grid-template-columns:1fr}.flow .k{width:88px}}
+  @media(max-width:680px){.badgood,.deal{grid-template-columns:1fr}.flow .k{width:96px}}
 </style>
 </head>
 <body>
@@ -43,68 +48,105 @@
   <div class="hero">
     <div class="eyebrow">소문설계 1기 · 2조 · 3주차 조별 과제</div>
     <h1>「글래스 코드」 소문 확산 — 매체 실행</h1>
-    <p class="sub">3주차 과제 = <b>매스 1가지 + 온 1가지</b>. (강사: 콘텐츠 지시서는 개인 과제로) · 조장 김서아 · 배영순 · 하지우 · 박지호</p>
+    <p class="sub">3주차 과제 = <b>매스 1가지 + 온 1가지</b>. (콘텐츠 지시서는 개인 과제로) · 조장 김서아 · 배영순 · 하지우 · 박지호</p>
+    <div class="note" style="margin-top:14px"><b>관통하는 한 줄 (강사)</b> — 소문거리는 ‘더 나은 이야기’가 아니라 <b>‘선이 그어지는 다른 이야기’</b>. 매체는 핵심 소문 문장 <b>“잔으로 인연을 만드는 곳”</b> 하나를, 접점마다 형태만 바꿔 전달하는 일이다.</div>
   </div>
 
   <section>
     <h2><span class="n">1</span>2주차 발표 피드백 반영 (수정)</h2>
-    <p class="mute">3주차 발표 때 받은 강사님 피드백을 먼저 반영해 다듬었습니다.</p>
     <div class="badgood">
       <div class="bad"><b>2주차 (수정 전)</b>소문 문장 “잔 하나로 취향을 읽고 대화의 문을 여는 바” — 길고 설명적</div>
-      <div class="good"><b>3주차 (수정 후) ⭐</b>소문 문장 <b>“잔으로 인연을 만드는 곳.”</b> (강사 추천 — 더 짧고 직관적)</div>
+      <div class="good"><b>3주차 (수정 후) ⭐</b>소문 문장 <b>“잔으로 인연을 만드는 곳.”</b> (강사 추천 — 짧고 직관적)</div>
     </div>
     <ul>
-      <li><b>오브제 디벨롭</b> — 취향 카드(입장권)에 더해, <b>‘매칭 카드(찢어 나눠 갖기)’</b> 추가. 둘만 맞춰지는 상징물 → 소문거리. (강사 추천)</li>
-      <li><b>운영 디테일</b> — <b>스탠딩 바</b>(앉은 자리에서 옮기기 부담 ↓) + <b>드레스 코드</b>(반바지·슬리퍼·나시 X) + 잔 가격으로 <b>격(퀄리피케이션)</b> 유지.</li>
-      <li><b>논란거리 = 욕망 자극</b> — “싱글만?·유부남녀는?” 같은 갑론을박이 오히려 소문이 된다(강사: 시장에 전달되면 무조건 잘 됨).</li>
+      <li><b>오브제 디벨롭</b> — 취향 카드(입장권)에 <b>‘매칭 카드(찢어 나눠 갖기)’</b> 추가. 둘만 맞춰지는 상징물 → ‘이거 뭐야?’ 대화를 유발하는 소문거리. (강사 추천)</li>
+      <li><b>운영 디테일</b> — <b>스탠딩 바</b>(룸 X, 자리 옮기기 쉽게) + <b>드레스 코드 필수</b>(반바지·슬리퍼·나시 입장 불가) + 잔 가격으로 <b>격(퀄리피케이션)</b> 유지.</li>
+      <li><b>논란거리 = 욕망 자극</b> — “싱글만?·유부남녀는?” 갑론을박이 오히려 소문(강사: 시장에 전달되면 대박).</li>
     </ul>
   </section>
 
   <section>
     <h2><span class="n">2</span>회의에서 정한 것 (요약)</h2>
-    <div class="lead">매스 = <span>공간 매체 · 테이블 안내문</span> &nbsp;/&nbsp; 온 = <span>취미 동호회 ‘호스트’ 콜라보</span></div>
+    <div class="lead">매스 = <span>검색(플레이스 소개글) + 공간(테이블·벽면)</span><br>온 = <span>취미 모임 ‘호스트’를 매체로</span></div>
     <ul>
-      <li><b>매스</b>는 5가지(검색·공간·상품·사람·콘텐츠) 중 <b>공간 매체</b>를 선택 — 우리는 ‘취향 카드’를 곳곳에 세우니 <b>‘테이블 안내문’</b>이 가장 자연스러운 매체.</li>
-      <li><b>온</b>은 핵심 타겟(30대 후반~40대 후반 싱글)이 속한 <b>취미 동호회/소모임</b>의 <b>호스트(주최자)</b>를 통해 확산.</li>
+      <li><b>매스</b> — 강사님이 우리 조에 직접 추천: <b>네이버 플레이스 소개글에 가치를 소비자 언어로.</b> 매장 안에선 같은 문장을 공간 매체(테이블 안내문·벽면)로 이어받는다.</li>
+      <li><b>온</b> — 핵심 타겟(30대 후반~40대 후반 싱글)이 속한 <b>취미 기반 모임</b>의 <b>호스트(주최자)</b>를 매체로 삼아 전염병식 확산.</li>
     </ul>
   </section>
 
   <section>
-    <h2><span class="n">3</span>과제 ① 매스 — 공간 매체 : 테이블 안내문</h2>
-    <p class="mute">스탠딩 바 곳곳(테이블·주문대)에 세워 둔다. 안내문이 ‘말 거는 법·거절하는 법·매칭 카드 쓰는 법’을 비대면으로 안내 = 손님이 부담 없이 글래스 코드의 룰을 이해하게 만드는 매체.</p>
+    <h2><span class="n">3</span>과제 ① 매스 — 한 문장을 접점마다</h2>
+    <p class="mute">핵심 소문 문장 “잔으로 인연을 만드는 곳”을 ⓐ검색 → ⓑ공간 → ⓒ사람 순서로 일관되게 전달. (강사: 평이한 설명 = 평범 = 소문 안 남)</p>
+
+    <h3>ⓐ 검색 매체 — 네이버 플레이스 소개글 <span class="tag">강사 직접 추천</span></h3>
     <div class="signage">
-      <div class="ttl">「글래스 코드」 — 잔으로 인연을 만드는 곳</div>
+      <div class="ttl">플레이스 소개글 (이용 ‘전’ 첫인상)</div>
       <ul>
-        <li>같은 취향(잔)이 통하는 분께, <b>편하게 말을 걸어보세요.</b></li>
-        <li>대화가 부담스러우면, <b>예의 있게 거절하셔도 괜찮습니다.</b> (혼자 있고 싶은 날엔 카드를 뒤집어 두세요.)</li>
-        <li>마음이 통했다면 — 연락처 대신 이 <b>매칭 카드를 찢어</b>, “<b>다음에 여기서 다시 만나요</b>”(날짜·시간)를 나눠 가지세요.</li>
-        <li>직접 말 걸기 어려우면, <b>직원에게 말씀해주세요.</b></li>
+        <li>“<b>품격 있게 매칭되는 취향 바 — 잔으로 인연을 만드는 곳.</b> 같은 취향(잔)이 통하는 사람을 자연스럽게 발견하는 스탠딩 바.”</li>
+        <li>사진: 매장·메뉴만 X → <b>취향 카드·매칭 카드(오브제)</b>를 보여주는 컷도. (강사: AI 사진 절대 금지)</li>
       </ul>
     </div>
-    <div class="note"><b>＋ 사람 매체(직원)와 연결</b> — 직원은 처음 와서 어색한 손님께 “오늘 ○○ 취향 분들 계세요” 식으로 <b>프레이밍</b>하고, 매칭 카드(찢어 나눠 갖기) 사용법을 한 번 더 안내. (강사: 직원 = 시장과 실시간 소통하는 유일한 매체 = 통역가)</div>
+
+    <h3>ⓑ 공간 매체 — 테이블 안내문 + 벽면문구</h3>
+    <div class="signage">
+      <div class="ttl">테이블 안내문 (비대면 ‘딜’)</div>
+      <ul>
+        <li>같은 취향(잔)이 통하는 분께 <b>편하게 말을 걸어보세요.</b> 부담되면 <b>예의 있게 거절</b>(혼자 있고 싶은 날은 카드를 뒤집어 두기).</li>
+        <li>마음이 통했다면 — 연락처 대신 <b>매칭 카드를 찢어</b> “다음에 여기서 다시 만나요”(날짜·시간)를 나눠 가지기.</li>
+        <li><b>리뷰 방향 제한</b> ⭐ — “오늘 어떤 잔으로 어떤 인연을 만났는지 한 줄 남겨주세요.” → 맥락이 모인 리뷰가 다시 <b>검색 매체</b>가 된다.</li>
+      </ul>
+    </div>
+    <div class="note"><b>벽면문구</b> ⭐ — 큰 벽면은 ‘사진 찍어 올리기 좋은 대형 광고판’. <b>“잔으로 인연을 만드는 곳”</b>을 대형 타이포로 → 손님이 인스타에 올리는 <b>포토존 = 무료 입소문</b>. (스탠딩 바라 자연스러움)</div>
+
+    <h3>ⓒ 사람 매체 — 직원 프레이밍</h3>
+    <div class="note">직원은 처음 와 어색한 손님께 “오늘 ○○ 취향 분들 계세요” 식으로 <b>틀을 지어주고</b>(프레이밍), 매칭 카드 사용법을 한 번 더 안내. (강사: 직원 = 시장과 실시간 소통하는 유일한 매체 = 통역가)</div>
+
+    <div class="note" style="border-left-color:var(--olive)"><b>팩트 vs 픽션</b> — ‘품격 있는 진짜 솔로만 모이는 곳’은 <b>말이 아니라 운영으로 증명</b>(드레스 코드·잔 가격·매칭 룰). 실제로 그렇게 운영해야 ‘내가 하는 행위’ = 팩트. (안 하면서 한다고 하면 잘될 때 공격받음)</div>
   </section>
 
   <section>
-    <h2><span class="n">4</span>과제 ② 온 — 취미 동호회 ‘호스트’ 콜라보</h2>
+    <h2><span class="n">4</span>과제 ② 온 — 취미 모임 ‘호스트’를 매체로</h2>
+    <div class="lead">온 = 사냥. 모든 사람에게 뿌리지 않고 — <span>취미 모임의 호스트 한 명을 매체로</span> 만들어, 그 모임 전체 → 또 다른 모임으로 <span>기하급수로(전염병)</span> 퍼뜨린다.</div>
+
+    <h3>① 타겟 → 속한 집단 → 의사결정권자</h3>
     <div class="flow">
-      <div class="row"><div class="k">핵심 타겟</div><div class="v">사회적으로 자리 잡은 <b>30대 후반~40대 후반 싱글.</b></div></div>
-      <div class="row"><div class="k">속한 집단</div><div class="v"><b>취미 동호회·소모임</b>(골프·와인·러닝·스쿠버 등) — 우리 ‘취향 칵테일’과 결이 같고, <b>솔로가 많으며</b> 공감대 기반이라 적합.</div></div>
-      <div class="row"><div class="k">의사결정권자</div><div class="v">동호회/소모임의 <b>‘호스트(모임 주최자)’.</b> (‘소모임’ 앱에서 러닝·와인 모임을 여는 사람처럼 — 여론을 주도)</div></div>
-      <div class="row"><div class="k">호스트의 욕망</div><div class="v">좋은 <b>신규 회원 영입</b> + 모임 <b>분위기·뒤풀이(번개) 장소.</b></div></div>
-      <div class="row"><div class="k">우리의 욕구</div><div class="v">품격 있는 <b>진짜 솔로 남녀 유입</b> + <b>재방문.</b></div></div>
+      <div class="row"><div class="k">타겟 페르소나</div><div class="v">사회적으로 자리 잡은 <b>30대 후반~40대 후반 싱글.</b></div></div>
+      <div class="row"><div class="k">속한 집단<br>(취미 기반)</div><div class="v"><b>(A) 큰 모임 속 취미 분과</b> — CEO 조찬모임(BNI류)도 그 안에서 <b>골프·독서·와인 동아리로 또 나뉜다</b> (배영순 대표 실제 참여). <br><b>(B) 취미로 생기는 소모임</b> — ‘소모임’ 앱처럼 러닝·와인·골프 모임이 <b>호스트가 직접 열려</b> 생긴다.</div></div>
+      <div class="row"><div class="k">의사결정권자<br>(여론 주도자)</div><div class="v">그 취미 모임의 <b>호스트 · 주최자 · 동아리 회장</b> — 모임 <b>장소·뒤풀이를 정하는 사람.</b></div></div>
     </div>
-    <h3>→ 두 욕구를 묶은 콜라보 제안</h3>
+    <div class="note" style="border-left-color:var(--olive)"><b>왜 딱 맞나</b> — 글래스 코드 = <b>취향(취미) 기반 만남</b> → 취미 모임과 결이 완전히 같다. 그래서 ‘억지 끼워맞춤’이 아니라 호스트가 데려오기 <b>가장 자연스러운 장소</b>가 된다.</div>
+
+    <h3>② 협약(콜라보) 관계 — 서로의 욕망을 주고받기</h3>
+    <div class="deal">
+      <div class="box give"><span class="h">우리가 호스트에게 (GIVE)</span>
+        <ul>
+          <li>모임 <b>단체 혜택</b>(웰컴 잔·프라이빗 스탠딩 존)</li>
+          <li><b>‘취향 매칭 나이트’</b> 진행 (그날 호스트 모임만의 이벤트)</li>
+          <li>호스트를 <b>‘특별한 자리를 만든 주최자’</b>로 세워줌(격·인기 ↑)</li>
+        </ul>
+      </div>
+      <div class="box get"><span class="h">호스트가 우리에게 (GET)</span>
+        <ul>
+          <li><b>단체 방문</b> + 회원에게 <b>입소문</b></li>
+          <li>정기 모임·뒤풀이 <b>장소화 → 재방문</b></li>
+          <li>회원에게 <b>새 인연·새 회원 영입 명분</b> 제공</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><b>핵심</b> — 단순 ‘단체 할인’(거래)으로 가면 약하다. <b>호스트의 욕망(좋은 회원 영입 + 격 있는 모임)</b>을 채워 <b>호스트가 영웅이 되게</b> 만들어야 온이 작동. (강사 5②: 의사결정권자의 욕망 + 나의 욕구 결합)</div>
+
+    <h3>③ 어떻게 닿을까 (컨택) — 강사 3가지</h3>
     <ul>
-      <li>“<b>동호회 단체로 오면 혜택</b> + 같은 취향끼리 자연스럽게 어울리는 곳(모임 뒤풀이·번개 장소)으로 쓰세요.”</li>
-      <li>호스트는 회원에게 <b>입소문</b>을 내고, 우리 바에서 <b>새 회원도 영입</b>(공감대 맞는 사람) → 호스트·우리 둘 다 이득.</li>
-      <li><b>분기별 1회 이상</b>, 여러 동호회(골프·와인·러닝…) 호스트에게 반복 제안. (강사: 온은 한 번이 아니라 계속)</li>
+      <li><b>네트워크 ⭐</b> — 배영순 대표가 <b>실제 CEO 조찬모임 멤버</b> → 그 안 취미 분과 호스트에게 바로 제안 (이미 네트워크 있음 = 팩트).</li>
+      <li><b>앱</b> — ‘소모임’·넷플연가 등 취미 모임 호스트에게 DM·콜라보 제안.</li>
+      <li><b>콜드메일</b> — 동호회 운영진에게 (100개 보내면 2개 답장, 그 2개가 계기).</li>
+      <li><b>지속</b> — 분기별 최소 1회 반복 (소문은 같은 자극을 계속 줘야 한다).</li>
     </ul>
-    <div class="note"><b>확장</b> — 협업은 ‘단체 동호회’ 단위로 디벨롭 가능(소모임·넷플연가 같은 호스트 플랫폼과). 단체 방문 혜택을 미끼로 호스트를 매체화.</div>
   </section>
 
   <section>
     <h2><span class="n">＋</span>개인 과제 (각자 매장)</h2>
-    <p class="mute">자기 업에 <b>매스 1가지 + 온 1가지 + 콘텐츠 지시서(5가지)</b>까지. (전파할 소문 문장 / 느낄 감정 / 보여줄 증거 / 금지 표현 ‘맛있다X→다르다O’ / 행동 제한)</p>
+    <p class="mute">자기 업에 <b>매스 1가지 + 온 1가지 + 콘텐츠 지시서(5가지)</b>까지. (전파할 소문 문장 / 느낄 감정 / 보여줄 증거 2+ / 금지 표현 ‘맛있다X→다르다O’ / 행동 제한)</p>
   </section>
 
   <footer>소문설계 1기 · 2조 3주차 조별 과제 — 글래스 코드 소문 확산(매체) · 김서아 · 배영순 · 하지우 · 박지호</footer>
