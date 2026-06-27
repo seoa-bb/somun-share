@@ -17,9 +17,16 @@
 <body>
 <div class="slide">
 <svg viewBox="0 0 1160 652" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#d98e98" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
   <!-- title -->
-  <text x="580" y="44" text-anchor="middle" fill="#d8b15f" font-size="13.5" font-weight="800" letter-spacing="5">GLASS CODE · 소문 확산 ( 매체 )</text>
-  <text x="580" y="78" text-anchor="middle" fill="#f3ead9" font-size="27" font-weight="850" letter-spacing="-.5">「잔으로 인연을 만드는 곳」을 — 여러 접점·여러 모임으로</text>
+  <text x="40" y="44" fill="#d8b15f" font-size="13.5" font-weight="800" letter-spacing="5">GLASS CODE · 소문 확산 ( 매체 )</text>
+  <text x="1120" y="44" text-anchor="end" fill="#d98e98" font-size="13" font-weight="800">★ 주력 = 이걸로 집중 발표</text>
+  <text x="580" y="82" text-anchor="middle" fill="#f3ead9" font-size="26" font-weight="850" letter-spacing="-.5">여러 접점·여러 모임이 있다 — 그중 <tspan fill="#e9aab0">★ 하나</tspan>에 집중</text>
 
   <!-- ===== 매스 ===== -->
   <g fill="none" stroke="#8a6f3f" stroke-width="2.2">
@@ -30,28 +37,31 @@
   <rect x="455" y="116" width="250" height="42" rx="21" fill="#1d160e" stroke="#d8b15f" stroke-width="2"/>
   <text x="580" y="143" text-anchor="middle" fill="#e9c485" font-size="16" font-weight="850">매스 = 낚시 · 모두에게</text>
 
-  <!-- 매스 cards (검색/공간/사람) -->
+  <!-- 매스 ① 검색 = 주력(강조) -->
   <g>
-    <rect x="100" y="182" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="386" cy="182" r="13" fill="#d8b15f"/><text x="386" y="187" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
-    <text x="122" y="216" fill="#f3ead9" font-size="18" font-weight="850">🔍 검색 매체</text>
-    <text x="122" y="240" fill="#b6a890" font-size="13.5">네이버 플레이스 소개글</text>
-    <text x="122" y="262" fill="#e9c485" font-size="12.5" font-weight="700">“품격 있게 매칭되는 취향 바”</text>
-    <text x="122" y="282" fill="#8a7d68" font-size="11.5">★ 강사 직접 추천</text>
+    <rect x="100" y="182" width="300" height="112" rx="14" fill="#2c1a18" stroke="#d98e98" stroke-width="3" filter="url(#glow)"/>
+    <rect x="305" y="170" width="92" height="26" rx="13" fill="#a85563"/>
+    <text x="351" y="187" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="800">★ 주력</text>
+    <text x="122" y="216" fill="#ffffff" font-size="18" font-weight="850">🔍 검색 매체</text>
+    <text x="122" y="240" fill="#e7c9cc" font-size="13.5">네이버 플레이스 소개글</text>
+    <text x="122" y="262" fill="#f0c7cb" font-size="12.5" font-weight="700">“품격 있게 매칭되는 취향 바”</text>
+    <text x="122" y="282" fill="#c89aa0" font-size="11.5">★ 강사 직접 추천 · 오기 전 첫 관문</text>
   </g>
-  <g>
+  <!-- 매스 ② 공간 -->
+  <g opacity="0.82">
     <rect x="430" y="182" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="716" cy="182" r="13" fill="#d8b15f"/><text x="716" y="187" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
+    <circle cx="716" cy="182" r="13" fill="#8a7350"/><text x="716" y="187" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
     <text x="452" y="216" fill="#f3ead9" font-size="18" font-weight="850">🏠 공간 매체</text>
     <text x="452" y="240" fill="#b6a890" font-size="13.5">테이블 안내문 · 벽면</text>
-    <text x="452" y="262" fill="#e9c485" font-size="12.5" font-weight="700">매칭 카드 룰 · 리뷰 방향 · 포토존</text>
+    <text x="452" y="262" fill="#a99a82" font-size="12.5">매칭 카드 룰 · 리뷰 방향 · 포토존</text>
   </g>
-  <g>
+  <!-- 매스 ③ 사람 -->
+  <g opacity="0.82">
     <rect x="760" y="182" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="1046" cy="182" r="13" fill="#d8b15f"/><text x="1046" y="187" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
+    <circle cx="1046" cy="182" r="13" fill="#8a7350"/><text x="1046" y="187" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
     <text x="782" y="216" fill="#f3ead9" font-size="18" font-weight="850">🙋 사람 매체</text>
     <text x="782" y="240" fill="#b6a890" font-size="13.5">직원 프레이밍</text>
-    <text x="782" y="262" fill="#e9c485" font-size="12.5" font-weight="700">“오늘 ○○ 취향 분들 계세요”</text>
+    <text x="782" y="262" fill="#a99a82" font-size="12.5">“오늘 ○○ 취향 분들 계세요”</text>
   </g>
 
   <!-- ===== 온 ===== -->
@@ -63,33 +73,36 @@
   <rect x="455" y="334" width="250" height="42" rx="21" fill="#1d160e" stroke="#d8b15f" stroke-width="2"/>
   <text x="580" y="361" text-anchor="middle" fill="#e9c485" font-size="16" font-weight="850">온 = 사냥 · 호스트 한 명</text>
 
-  <!-- 온 cards (조찬/소모임/동호회) -->
+  <!-- 온 ① 조찬모임 = 주력(강조) -->
   <g>
-    <rect x="100" y="400" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="386" cy="400" r="13" fill="#d8b15f"/><text x="386" y="405" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
-    <text x="122" y="434" fill="#f3ead9" font-size="18" font-weight="850">🤝 CEO 조찬모임</text>
-    <text x="122" y="458" fill="#b6a890" font-size="13.5">그 안에서 골프·와인 분과로 또 나뉨</text>
-    <text x="122" y="482" fill="#e9c485" font-size="12.5" font-weight="800">★ 배영순 대표 실제 네트워크</text>
+    <rect x="100" y="400" width="300" height="112" rx="14" fill="#2c1a18" stroke="#d98e98" stroke-width="3" filter="url(#glow)"/>
+    <rect x="305" y="388" width="92" height="26" rx="13" fill="#a85563"/>
+    <text x="351" y="405" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="800">★ 주력</text>
+    <text x="122" y="434" fill="#ffffff" font-size="18" font-weight="850">🤝 CEO 조찬모임</text>
+    <text x="122" y="458" fill="#e7c9cc" font-size="13.5">그 안에서 골프·와인 분과로 또 나뉨</text>
+    <text x="122" y="482" fill="#f0c7cb" font-size="12.5" font-weight="800">★ 배영순 대표 실제 멤버 = 컨택 있음</text>
   </g>
-  <g>
+  <!-- 온 ② 소모임 -->
+  <g opacity="0.82">
     <rect x="430" y="400" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="716" cy="400" r="13" fill="#d8b15f"/><text x="716" y="405" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
+    <circle cx="716" cy="400" r="13" fill="#8a7350"/><text x="716" y="405" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
     <text x="452" y="434" fill="#f3ead9" font-size="18" font-weight="850">📱 ‘소모임’ 앱</text>
     <text x="452" y="458" fill="#b6a890" font-size="13.5">취미로 호스트가 직접 여는 모임</text>
-    <text x="452" y="482" fill="#8a7d68" font-size="12.5">러닝·와인·골프 …</text>
+    <text x="452" y="482" fill="#a99a82" font-size="12.5">러닝·와인·골프 …</text>
   </g>
-  <g>
+  <!-- 온 ③ 동호회 -->
+  <g opacity="0.82">
     <rect x="760" y="400" width="300" height="112" rx="14" fill="#211910" stroke="#4a3c28" stroke-width="1.5"/>
-    <circle cx="1046" cy="400" r="13" fill="#d8b15f"/><text x="1046" y="405" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
+    <circle cx="1046" cy="400" r="13" fill="#8a7350"/><text x="1046" y="405" text-anchor="middle" fill="#221a12" font-size="13" font-weight="800">✓</text>
     <text x="782" y="434" fill="#f3ead9" font-size="18" font-weight="850">⛳ 취미 동호회</text>
     <text x="782" y="458" fill="#b6a890" font-size="13.5">같은 취향끼리 모인 솔로 多</text>
-    <text x="782" y="482" fill="#8a7d68" font-size="12.5">골프·와인·러닝·스쿠버 …</text>
+    <text x="782" y="482" fill="#a99a82" font-size="12.5">골프·와인·러닝·스쿠버 …</text>
   </g>
 
   <!-- 온 flow bar -->
   <rect x="100" y="536" width="960" height="54" rx="13" fill="#0f0b07" stroke="#d8b15f" stroke-width="1.1"/>
-  <text x="580" y="562" text-anchor="middle" fill="#f3ead9" font-size="14.5" font-weight="800">각 모임의 <tspan fill="#e9c485">호스트</tspan> → 협약(혜택 ↔ 단체방문·입소문·새 회원) → <tspan fill="#e9c485">모임 전체로 확산</tspan></text>
-  <text x="580" y="581" text-anchor="middle" fill="#9c8e78" font-size="11.5">컨택: 네트워크(영순)·소모임 앱·콜드메일 / 분기 1회+</text>
+  <text x="580" y="562" text-anchor="middle" fill="#f3ead9" font-size="14.5" font-weight="800">주력 모임의 <tspan fill="#e9aab0">호스트</tspan> → 협약(혜택 ↔ 단체방문·입소문·새 회원) → <tspan fill="#e9aab0">모임 전체로 확산</tspan></text>
+  <text x="580" y="581" text-anchor="middle" fill="#9c8e78" font-size="11.5">컨택: ★ 네트워크(영순 대표) 우선 / 분기 1회+</text>
 
   <text x="580" y="624" text-anchor="middle" fill="#6f6454" font-size="11.5">소문거리는 ‘더 나은 이야기’가 아니라 ‘선이 그어지는 다른 이야기’ · 2조 김서아·배영순·하지우·박지호</text>
 </svg>
