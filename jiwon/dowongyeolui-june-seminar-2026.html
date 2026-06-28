@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도원결의 6월 세미나 — R&D 입문 & 6월 지원사업 공략</title>
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --sky: #e8f0fe;
+    --sky2: #dbeafe;
+    --gold: #f59e0b;
+    --green: #059669;
+    --red: #dc2626;
+    --purple: #7c3aed;
+    --teal: #0d9488;
+    --bg: #f8faff;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+  nav {
+    background: var(--navy);
+    padding: 10px 16px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.2s;
+  }
+  nav a:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+  nav a.current { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+  .hero {
+    background: linear-gradient(135deg, #0a1628 0%, var(--navy) 50%, #1e3a8a 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; padding: 5px 18px; font-size: 13px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(22px, 5vw, 38px); font-weight: 900; line-height: 1.25; margin-bottom: 12px; }
+  .hero h1 span { color: #93c5fd; }
+  .hero .sub { font-size: 15px; opacity: 0.8; max-width: 500px; margin: 0 auto 20px; }
+  .hero .meta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .hero .meta-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 6px 16px; font-size: 12px; color: rgba(255,255,255,0.85); }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+
+  .section { margin-bottom: 40px; }
+  .section-label { font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .section-title { font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
+  .section-desc { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+
+  /* 개념 카드 */
+  .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 520px) { .concept-grid { grid-template-columns: 1fr; } }
+  .concept-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .concept-card .cc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .concept-card .cc-title { font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+  .concept-card .cc-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .concept-card.blue { border-color: #bfdbfe; background: #eff6ff; }
+  .concept-card.blue .cc-label { color: var(--blue); }
+  .concept-card.teal { border-color: #99f6e4; background: #f0fdf4; }
+  .concept-card.teal .cc-label { color: var(--teal); }
+
+  /* 하이라이트 박스 */
+  .highlight-box { background: linear-gradient(135deg, #1e3a8a 0%, #1a2744 100%); color: #fff; border-radius: 14px; padding: 24px; margin-bottom: 20px; }
+  .highlight-box h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; color: #93c5fd; }
+  .highlight-box p { font-size: 14px; opacity: 0.9; line-height: 1.7; }
+  .highlight-box .amount { font-size: 28px; font-weight: 900; color: #fde68a; }
+
+  /* 체크리스트 */
+  .check-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; padding: 10px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+  .check-list li .icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .check-list li.good { border-color: #bbf7d0; background: #f0fdf4; }
+  .check-list li.warn { border-color: #fde68a; background: #fffbeb; }
+  .check-list li.bad { border-color: #fecaca; background: #fef2f2; }
+  .check-list li b { color: var(--navy); }
+
+  /* 표 */
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th { background: var(--navy); color: #fff; padding: 10px 12px; text-align: left; font-weight: 700; }
+  .data-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+  .data-table tr:nth-child(even) td { background: #f8faff; }
+  .data-table .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+  .badge-blue { background: var(--sky2); color: var(--blue); }
+  .badge-gold { background: #fef3c7; color: #92400e; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-purple { background: #ede9fe; color: var(--purple); }
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; }
+
+  /* 단계 카드 */
+  .step-list { display: flex; flex-direction: column; gap: 12px; }
+  .step-item { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-body .step-title { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+  .step-body .step-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* 지원사업 카드 */
+  .program-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 12px; }
+  .program-card .pc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+  .program-card .pc-title { font-size: 16px; font-weight: 800; color: var(--navy); }
+  .program-card .pc-amount { font-size: 20px; font-weight: 900; color: var(--blue); flex-shrink: 0; }
+  .program-card .pc-deadline { font-size: 12px; font-weight: 700; color: var(--red); background: #fee2e2; border-radius: 6px; padding: 2px 10px; margin-bottom: 8px; display: inline-block; }
+  .program-card .pc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .pc-tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--sky2); color: var(--blue); }
+  .program-card .pc-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* 인사이트 박스 */
+  .insight-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 18px 20px; margin-bottom: 16px; }
+  .insight-box h4 { font-size: 14px; font-weight: 800; color: #92400e; margin-bottom: 6px; }
+  .insight-box p, .insight-box li { font-size: 13px; color: #78350f; line-height: 1.7; }
+  .insight-box ul { padding-left: 16px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 28px 16px; font-size: 12px; }
+  footer .footer-title { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 700; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">📚 목차</a>
+  <a href="dowongyeolui-week1-lecture-summary.html">1강</a>
+  <a href="dowongyeolui-week2-lecture-summary.html">2강</a>
+  <a href="dowongyeolui-week3-lecture-summary.html">3강</a>
+  <a href="dowongyeolui-week4-lecture-summary.html">4강</a>
+  <a href="dowongyeolui-june-seminar-2026.html" class="current">6월 세미나</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">📅 2026년 6월 세미나</div>
+  <h1>R&D 입문 &<br><span>6월 지원사업 공략</span></h1>
+  <div class="sub">사업화 지원 너머의 2억 — R&D의 문을 여는 시간<br>+ 6월 마감 지원사업 총정리</div>
+  <div class="meta-row">
+    <div class="meta-pill">🎯 핵심: 창업성장 디딤돌 2억</div>
+    <div class="meta-pill">📋 Claude 독립 정리본</div>
+    <div class="meta-pill">⚡ 헤르메스 버전과 비교용</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- PART 1: R&D vs 사업화 개념 -->
+  <div class="section">
+    <div class="section-label">Part 1 — 개념 정리</div>
+    <div class="section-title">사업화 지원 vs R&D — 두 축의 차이</div>
+    <div class="section-desc">정부 지원금의 절반 이상이 R&D에 있다. 지금까지 K-스타트업(사업화)만 봤다면, 이제 IRIS(R&D)를 봐야 할 때.</div>
+
+    <div class="concept-grid">
+      <div class="concept-card blue">
+        <div class="cc-label">🏢 사업화 지원 (비R&D)</div>
+        <div class="cc-title">K-스타트업</div>
+        <div class="cc-desc">마케팅·광고·사업비 지원. 예창패·초창패·청창사·창업중심대학. 경쟁률 수십 대 1. 금액: 수천만 원 단위.</div>
+      </div>
+      <div class="concept-card teal">
+        <div class="cc-label">🔬 연구개발 (R&D)</div>
+        <div class="cc-title">IRIS (범부처 통합)</div>
+        <div class="cc-desc">제품·기술·서비스를 연구·개발하는 과정 지원. 경쟁률 낮음. 금액: <b>최소 2억부터</b>. 선행 필요.</div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <h4>💡 핵심 공식</h4>
+      <p>R&D(연구개발) → 사업화(마케팅·판매) 순서가 원칙.<br>
+      소상공인 생활혁신 같은 사업에도 기술개발(50% 이상) 요구 → 나라 전체가 R&D 방향으로 가는 중.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 2: 창업성장 디딤돌 -->
+  <div class="section">
+    <div class="section-label">Part 2 — 핵심 사업</div>
+    <div class="section-title">창업성장 디딤돌 첫걸음 — 2억짜리 R&D</div>
+
+    <div class="highlight-box">
+      <h3>💰 지원 규모</h3>
+      <div class="amount">2억 원</div>
+      <p style="margin-top:8px;">1년에 3번 모집 (1차: 1월 / 2차: 3월 / 3차: 4월)<br>
+      자부담 약 25% — 대부분 현물로 충당 가능. 현금 자부담은 10% 이내.</p>
+    </div>
+
+    <ul class="check-list">
+      <li class="good">
+        <span class="icon">✅</span>
+        <div><b>자격 조건 (매우 넓음)</b> — 업력 7년 이내 + 매출 20억 미만. 1인 기업·개인사업자·법인 모두 가능. 매출 0원도 OK.</div>
+      </li>
+      <li class="good">
+        <span class="icon">✅</span>
+        <div><b>경쟁률이 낮다</b> — 예창패·초창패처럼 알려지지 않아 경쟁자가 적음. 어지간한 수준이면 합격.</div>
+      </li>
+      <li class="good">
+        <span class="icon">✅</span>
+        <div><b>간섭 없음</b> — 합격 후 사업비 집행하면 결과 보고 전까지 거의 연락 없음.</div>
+      </li>
+      <li class="warn">
+        <span class="icon">⚠️</span>
+        <div><b>성능 지표 설정 필수</b> — 숫자 기반 목표치를 잡아야 하고, 나중에 공인 시험 성적서로 증빙해야 함.</div>
+      </li>
+      <li class="warn">
+        <span class="icon">⚠️</span>
+        <div><b>지금부터 준비</b> — 내년 1월 모집까지 특허·선행연구·협력기관 확보 필요. 늦으면 기회 놓침.</div>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 3: 성능 지표 -->
+  <div class="section">
+    <div class="section-label">Part 3 — 합격의 70%</div>
+    <div class="section-title">성능 지표 — R&D 사업계획서의 핵심</div>
+    <div class="section-desc">사업화는 경쟁사 비교표가 핵심이라면, R&D는 <b>성능 지표</b>가 합격의 70% 이상을 결정한다.</div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>구성 요소</th>
+            <th>내용</th>
+            <th>예시</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>지표명</b></td>
+            <td>측정할 성능 항목</td>
+            <td>정확도, 응답속도, 내구도, 강도, 에너지 효율</td>
+          </tr>
+          <tr>
+            <td><b>단위</b></td>
+            <td>측정 단위</td>
+            <td>%, 초(s), TPS, kg, CFU/g</td>
+          </tr>
+          <tr>
+            <td><b>글로벌 1등 수준</b></td>
+            <td>세계 최고 현재 성능</td>
+            <td>오픈AI GPT-4, 테슬라, 삼성전자 등</td>
+          </tr>
+          <tr>
+            <td><b>국내 최고 수준</b></td>
+            <td>국내 선두 현재 성능</td>
+            <td>네이버, LG, 카카오 등 유사 기술</td>
+          </tr>
+          <tr>
+            <td><b>현재 수준</b></td>
+            <td>내 현재 기술 수준</td>
+            <td>현재 3초 응답, 강도 500kg</td>
+          </tr>
+          <tr>
+            <td><b>목표치</b></td>
+            <td>R&D 후 달성할 수치</td>
+            <td>2초 이하, 강도 800kg 이상</td>
+          </tr>
+          <tr>
+            <td><b>검증 방법</b></td>
+            <td>어떻게 증빙할지</td>
+            <td>TTA 공인 성적서, KTL 인증, 자체 실험</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-desc" style="font-size:13px;">보통 4~5개 지표 설정. 그 중 1~2개만 높은 난이도로 잡고 나머지는 적당히.</div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>분야</th><th>주요 성능 지표</th><th>검증 기관</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🤖 AI / 플랫폼</td>
+            <td>F1 스코어, TPS, 응답 지연, 예외 발생률</td>
+            <td>TTA, 자체 테스트</td>
+          </tr>
+          <tr>
+            <td>🏭 제조 / 하드웨어</td>
+            <td>인장 강도, 내구도, 배터리 효율, 센서 오차율</td>
+            <td>KTL, KETI</td>
+          </tr>
+          <tr>
+            <td>🍱 식품 / 바이오</td>
+            <td>위생 균 검사, 유효 성분 함량, 기능성 인체 실험</td>
+            <td>식품안전처, KFRI</td>
+          </tr>
+          <tr>
+            <td>💄 뷰티 / 화장품</td>
+            <td>피부 자극도, 기능성 성분 함량, 안전성</td>
+            <td>KCII, 피부과학연구원</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insight-box">
+      <h4>🚨 함부로 높게 잡으면 안 되는 이유</h4>
+      <p>성능 지표는 나중에 <b>공인 시험 성적서</b>로 실제 달성을 증명해야 한다.<br>
+      달성 못 하면 사업비를 돌려줘야 할 수 있음. 적당히, 현실적으로 잡는 것이 전략.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 4: 개발 전략 -->
+  <div class="section">
+    <div class="section-label">Part 4 — 실전 전략</div>
+    <div class="section-title">혼자 개발 안 해도 된다 — 컨소시엄 전략</div>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">내 사업 도메인에서 R&D 주제 발굴</div>
+          <div class="step-desc">챗GPT / Claude에게 "내가 [업종]을 하는데 R&D 주제 5개 만들어줘" 요청. NTIS / 키프리스에서 유사 합격 사례 검색 후 참고.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">협력 기관 섭외 (대학교수 / 민간 연구소)</div>
+          <div class="step-desc">교수는 ①학생 연구 기회 ②연구비 예산 두 가지를 좋아함. 연구는 연구소에서 하고, 나는 도메인 데이터·기획만 제공. 개발비 외주(예: 4천만원) 주고 나머지 1.6억은 인건비 등으로 활용.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">선행 연구 / 특허 확보</div>
+          <div class="step-desc">사업계획서에 "이미 해온 것"이 있어야 신뢰도 상승. 특허 출원(임시명세 포함), 자체 실험 데이터, 유사 논문 인용 등 쌓아두기.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">성능 지표 설정 + 사업계획서 작성</div>
+          <div class="step-desc">PSST 구조와 동일. 앞부분이 기술에 더 깊이 들어갈 뿐. 지표 설정은 AI에게 맡기면 1분 만에 5개 나옴. 양식: 개요 1p + 개발 방법 4p + 선행연구 1p + 팀 1p + 예산 2p.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">결과 보고 — 공인 시험 성적서 제출</div>
+          <div class="step-desc">제품 실물 확인 없음. 성적서만 내면 끝. 공인 기관에 의뢰하면 수십만~수백만 원으로 성적서 발급 가능.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <h4>🔍 선행 연구 찾는 사이트</h4>
+      <ul>
+        <li><b>NTIS (국가과학기술정보서비스)</b> — 모든 R&D 합격 과제 공개. "미용실", "AI 추천", "식품 개발" 검색 가능.</li>
+        <li><b>키프리스 (KIPRIS)</b> — 국내 특허 전체 검색. 유사 특허 확인 후 내 특허 방향 잡기.</li>
+        <li><b>IRIS (범부처 통합)</b> — R&D 공고 검색 및 지원 접수.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 5: 6월 지원사업 -->
+  <div class="section">
+    <div class="section-label">Part 5 — 6월 마감 지원사업</div>
+    <div class="section-title">6월에 지원해야 할 사업들</div>
+
+    <div class="program-card">
+      <div class="pc-header">
+        <div class="pc-title">🏪 소상공인 생활문화혁신지원사업</div>
+        <div class="pc-amount">최대 1억</div>
+      </div>
+      <div class="pc-deadline">⏰ 6월 마감 (내일 6시)</div>
+      <div class="pc-desc">
+        소상공인 대상 신규 사업. 두 페이지 사업계획서. 기술개발 50% 이상 예산 배분 요구 (레시피·굿즈·향수 개발 수준도 가능). 단독 1억 / 협업 최대 3억. 자부담 10%.
+      </div>
+      <div class="pc-tags">
+        <span class="pc-tag">소상공인24 접수</span>
+        <span class="pc-tag">소상공인 전용</span>
+        <span class="pc-tag">기술개발 50%↑</span>
+        <span class="pc-tag">올해 첫 신규 사업</span>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <div class="pc-header">
+        <div class="pc-title">🤖 AI 인재 실증형 초창패 (도약 패키지)</div>
+        <div class="pc-amount">최대 2억</div>
+      </div>
+      <div class="pc-deadline">⏰ 6월 12일 (금요일) 마감</div>
+      <div class="pc-desc">
+        AI 양성 과정 수료자를 고용하는 조건으로 1.3억~2억 지원. 기존 초창패 양식 + AI 인재 활용 계획 2p 추가. 업력 7년 이내 (초기: 3년, 도약: 3~7년). 정규직 채용 시 가점.
+      </div>
+      <div class="pc-tags">
+        <span class="pc-tag">K-스타트업 접수</span>
+        <span class="pc-tag">초창패 양식 동일</span>
+        <span class="pc-tag">AI 인재 채용 조건</span>
+        <span class="pc-tag">지방 우대</span>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <div class="pc-header">
+        <div class="pc-title">🌍 글로벌 협력형 R&D 예비연구형</div>
+        <div class="pc-amount">최대 5.5억</div>
+      </div>
+      <div class="pc-deadline">⏰ 6월 9일 (화요일) 마감</div>
+      <div class="pc-desc">
+        해외 대학/기관과 협력하는 R&D. 예비연구형 5개 과제 선발. 6개월에 1.1억 지원. 예비 통과 후 본 연구로 연결되면 수억 추가 가능. 재공고 = 지원자 없음 = 넣으면 유리.
+      </div>
+      <div class="pc-tags">
+        <span class="pc-tag">IRIS 접수</span>
+        <span class="pc-tag">재공고 = 낮은 경쟁</span>
+        <span class="pc-tag">6개월 과제</span>
+        <span class="pc-tag">본 연구 연계</span>
+      </div>
+    </div>
+
+    <div class="table-wrap" style="margin-top:20px;">
+      <table class="data-table">
+        <thead>
+          <tr><th>사업명</th><th>지원금</th><th>마감</th><th>특이사항</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>장애인 창업 사업화 지원</td>
+            <td>~2천만원</td>
+            <td>6월 중</td>
+            <td><span class="badge badge-purple">장애인 대상</span></td>
+          </tr>
+          <tr>
+            <td>AI 청년창업 기업 동반성장 바우처</td>
+            <td>최대 9억</td>
+            <td>하반기</td>
+            <td><span class="badge badge-gold">10개 과제</span></td>
+          </tr>
+          <tr>
+            <td>모두의 챌린지 뷰티</td>
+            <td>POC 1억</td>
+            <td>6월 내일</td>
+            <td><span class="badge badge-blue">아모레/콜마 협력</span></td>
+          </tr>
+          <tr>
+            <td>기술이전 사업화 지원 (울산 등)</td>
+            <td>1,200만원</td>
+            <td>수시</td>
+            <td><span class="badge badge-green">특허 구매 후 신청</span></td>
+          </tr>
+          <tr>
+            <td>경북 IP 창출 지원 (RIPC)</td>
+            <td>2,200만원</td>
+            <td>6월 15일</td>
+            <td><span class="badge badge-blue">브랜드·특허 포함</span></td>
+          </tr>
+          <tr>
+            <td>여성벤처 활성화 지원</td>
+            <td>1,000만원</td>
+            <td>6월 9일</td>
+            <td><span class="badge badge-purple">여성 대표 대상</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 6: 지역 전략 -->
+  <div class="section">
+    <div class="section-label">Part 6 — 지역 전략</div>
+    <div class="section-title">지방 사업자 등록 — 알아야 할 것들</div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>지역 구분</th><th>대표 지역</th><th>자부담</th><th>청년 세액감면</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-gold">특별지원 40개 지역</span></td>
+            <td>양구·화천·괴산·단양·보은 등</td>
+            <td style="color:var(--green);font-weight:800;">10%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-blue">우대 지역</span></td>
+            <td>가평·연천·평창·홍천·논산·남원 등</td>
+            <td style="color:var(--blue);font-weight:800;">20%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>비수도권 일반</td>
+            <td>기타 지방 전 지역</td>
+            <td>25%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>수도권 (과밀 외)</td>
+            <td>남양주·김포·일부 인천</td>
+            <td>30%</td>
+            <td>75%</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-red">수도권 과밀억제</span></td>
+            <td>강남·서초·홍대권 등</td>
+            <td style="color:var(--red);font-weight:800;">30%</td>
+            <td>50%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="check-list">
+      <li class="good">
+        <span class="icon">💡</span>
+        <div><b>비상주 오피스</b> — 월 1~4만원. 전국 어디나 있음. 사업자 주소 등록 가능. 온라인 사업자에게 현실적 대안.</div>
+      </li>
+      <li class="good">
+        <span class="icon">💡</span>
+        <div><b>합격 후 주소 이전</b> — 예비창업자 공고는 합격 후 해당 지역으로 사업자 이전 조건인 경우 많음. 일단 신청하고 합격 후 이전.</div>
+      </li>
+      <li class="warn">
+        <span class="icon">⚠️</span>
+        <div><b>청년 세액감면 받는 경우</b> — 지방에 사업자 두고 서울에 사는 구조는 세무서 추적 가능성. 왕래 흔적 남기고 사업 연관성 확보 필요.</div>
+      </li>
+      <li class="good">
+        <span class="icon">💡</span>
+        <div><b>사업자 주소 변경</b> — 홈택스에서 클릭 몇 번. 임대차 계약서(가족·지인 집 주소) 첨부하면 1시간 내 변경 가능.</div>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PART 7: 7월 예고 -->
+  <div class="section">
+    <div class="section-label">Part 7 — 다음 단계</div>
+    <div class="section-title">7월 세미나 예고 — 기업부설연구소 + 벤처인증</div>
+
+    <div class="concept-grid">
+      <div class="concept-card blue">
+        <div class="cc-label">🏛 기업부설연구소</div>
+        <div class="cc-title">R&D 가점 + 인건비 지원</div>
+        <div class="cc-desc">R&D 사업계획서 가점. 신진연구원 연봉 50%를 10년간 지원받는 "연구인력 지원사업" 연계 가능. 설립 조건: 공간(시설) + 인력.</div>
+      </div>
+      <div class="concept-card teal">
+        <div class="cc-label">🚀 벤처기업 인증</div>
+        <div class="cc-title">대출 우대 + 가점</div>
+        <div class="cc-desc">벤처 인증 시 정책금융 금리 우대, R&D 디딤돌 가점, 각종 지원사업 우대. 특허 있으면 훨씬 쉽게 취득 가능.</div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <h4>📅 지금부터 1년 준비 로드맵</h4>
+      <ul>
+        <li><b>6~7월:</b> R&D 주제 선정 + 특허 출원 + 협력기관 섭외</li>
+        <li><b>8~9월:</b> 기업부설연구소 설립 + 벤처인증 취득 (7월 세미나 후)</li>
+        <li><b>10~12월:</b> R&D 사업계획서 초안 완성 + 선행 실험 데이터 확보</li>
+        <li><b>내년 1월:</b> 창업성장 디딤돌 첫걸음 1차 접수 → 2억 도전</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 핵심 정리 -->
+  <div class="section">
+    <div class="section-label">오늘의 핵심</div>
+    <div class="section-title">Claude가 뽑은 3가지 인사이트</div>
+    <ul class="check-list">
+      <li class="good">
+        <span class="icon">🏆</span>
+        <div><b>R&D는 경쟁이 없다</b> — 예창패·초창패는 수십 대 1, 디딤돌은 2~4대 1. 아는 사람이 없기 때문. 지금 준비하면 내년에 2억을 남들이 모르는 사이에 가져갈 수 있다.</div>
+      </li>
+      <li class="good">
+        <span class="icon">🏆</span>
+        <div><b>혼자 개발 안 해도 된다</b> — 대표는 아이디어·기획·데이터 제공. 개발은 대학교수·연구소에 외주. 2억 중 4천만원 외주, 1.6억은 내가 활용하는 구조.</div>
+      </li>
+      <li class="good">
+        <span class="icon">🏆</span>
+        <div><b>지방 사업자가 진짜 유리하다</b> — 자부담 10~25%, 세액감면 100%, 지역 스타기업 혜택. 비상주 오피스 월 1~4만원으로 지방 사업자 가능.</div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-title">도원결의 — 2026년 6월 세미나</div>
+  <div>Claude 독립 정리본 · 헤르메스 버전과 비교용</div>
+  <div style="margin-top:6px; font-size:11px; color:rgba(255,255,255,0.3);">강의 원본 내용 기준 / 중요한 내용은 강의 원본 함께 참고</div>
+</footer>
+
+</body>
+</html>
